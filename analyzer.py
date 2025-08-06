@@ -6,7 +6,7 @@ import os
 import sys
 from networkx.algorithms import community
 
-# (As funções format_report e analyze_graph são coladas aqui)
+# Arquivo auxiliar para análise dos grafos
 
 def format_report(graph_name, metrics):
     """Formata as métricas coletadas em uma string Markdown."""
