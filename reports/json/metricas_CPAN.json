@@ -1,0 +1,207 @@
+{
+  "name": "CPAN",
+  "nodes": 32975,
+  "edges": 282246,
+  "density": 0.000259580077634167,
+  "is_directed": true,
+  "scc_count": 32476,
+  "wcc_count": 32,
+  "largest_scc_size": 420,
+  "largest_wcc_size": 32898,
+  "lcc_nodes": 32898,
+  "lcc_percent": 99.76648976497347,
+  "lcc_edges": 282194,
+  "lcc_edges_percent": 99.98157635537794,
+  "avg_degree": 17.118786959818046,
+  "max_degree": 18721,
+  "degree_mean": 17.118786959818046,
+  "degree_median": 6.0,
+  "degree_max": 18721,
+  "avg_in_degree": 8.559393479909023,
+  "max_in_degree": 18721,
+  "in_degree_mean": 8.559393479909023,
+  "in_degree_median": 0.0,
+  "in_degree_max": 18721,
+  "avg_out_degree": 8.559393479909023,
+  "max_out_degree": 373,
+  "out_degree_mean": 8.559393479909023,
+  "out_degree_median": 5.0,
+  "out_degree_max": 373,
+  "top_in_degree": [
+    [
+      "Test-More",
+      18721
+    ],
+    [
+      "ExtUtils-MakeMaker",
+      17110
+    ],
+    [
+      "perl",
+      12314
+    ],
+    [
+      "Test-Pod",
+      6215
+    ],
+    [
+      "strict",
+      5030
+    ],
+    [
+      "warnings",
+      4880
+    ],
+    [
+      "File-Spec",
+      4801
+    ],
+    [
+      "Module-Build",
+      4172
+    ],
+    [
+      "Carp",
+      4143
+    ],
+    [
+      "Test-Pod-Coverage",
+      3581
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "Task-POE-All",
+      373
+    ],
+    [
+      "Task-BeLike-MELO",
+      310
+    ],
+    [
+      "Task-MojoliciousPlugins-PerlAcademy",
+      283
+    ],
+    [
+      "Task-WebGUI",
+      201
+    ],
+    [
+      "Task-MasteringPerl",
+      191
+    ],
+    [
+      "Task-BeLike-LESPEA",
+      177
+    ],
+    [
+      "Task-Cpanel-Core",
+      167
+    ],
+    [
+      "Dist-Zilla-PluginBundle-Author-ETHER",
+      162
+    ],
+    [
+      "Task-BeLike-BINGOS",
+      159
+    ],
+    [
+      "RapidApp",
+      149
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "ExtUtils-MakeMaker",
+      0.08054415579607135
+    ],
+    [
+      "Test-More",
+      0.06182125846660155
+    ],
+    [
+      "perl",
+      0.04140014414958383
+    ],
+    [
+      "File-Spec",
+      0.02005592487612929
+    ],
+    [
+      "Data-Dumper",
+      0.013795427813569485
+    ],
+    [
+      "File-Basename",
+      0.013665985726544
+    ],
+    [
+      "Encode",
+      0.013302282247715595
+    ],
+    [
+      "Pod-Man",
+      0.01171163474364185
+    ],
+    [
+      "Carp",
+      0.01110626241775764
+    ],
+    [
+      "Test-Pod",
+      0.008273390719112636
+    ]
+  ],
+  "betweenness": [
+    [
+      "Dist-Zilla",
+      0.0026732471162675443
+    ],
+    [
+      "Module-Build",
+      0.002631926884728646
+    ],
+    [
+      "ExtUtils-Manifest",
+      0.0024808857119845546
+    ],
+    [
+      "Moose",
+      0.0022391477401271878
+    ],
+    [
+      "Dist-Zilla-Plugin-MetaProvides-Package",
+      0.001190031009001281
+    ],
+    [
+      "Test-Spelling",
+      0.001185784944856453
+    ],
+    [
+      "Try-Tiny",
+      0.0011779485657879927
+    ],
+    [
+      "Pod-Spell",
+      0.0011501080116982367
+    ],
+    [
+      "Dist-Zilla-PluginBundle-Author-ETHER",
+      0.0011304089111679216
+    ],
+    [
+      "Moo",
+      0.0011075508097933772
+    ]
+  ],
+  "avg_clustering": 0.13962735370372234,
+  "communities": 65,
+  "modularity": 0.3815484375837992,
+  "diameter": 13,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 420,
+  "diameter_component_percent": 1.2736921910538288,
+  "elapsed_time": 207.8166069984436
+}

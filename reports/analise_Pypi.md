@@ -1,31 +1,40 @@
-# Análise do Grafo: Pypi
+# Análise Completa do Grafo: Pypi
 
-## 1. Métricas Gerais
+## 1. Métricas Básicas
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 46,668 |
-| **Arestas (Dependências)** | 126,759 |
-| **Densidade do Grafo** | 0.00005820 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Nós** | 46,668 |
+| **Arestas** | 126,759 |
+| **Densidade** | 0.00005820 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 577 |
-| **Nós no Maior Componente (LCC)** | 45,180 (96.81%) |
-| **Arestas no Maior Componente (LCC)** | 125,754 (99.21%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 46,642 |
+| **Componentes Fracamente Conectados (WCC)** | 577 |
+| **Maior SCC** | 4 nós |
+| **Maior WCC** | 45,180 nós |
+| **Nós no Maior Componente** | 45,180 (96.81%) |
+| **Arestas no Maior Componente** | 125,754 (99.21%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 2.72 | 2.72 | 5.43 |
-| **Mediana** | 0.00 | 2.00 | 2.00 |
-| **Máximo** | 9,459 | 120 | 9,459 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 5.43 |
+| **Grau Máximo** | 9,459 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 2.72 |
+| **In-Degree Máximo** | 9,459 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 2.72 |
+| **Out-Degree Máximo** | 120 |
+| **Out-Degree Mediano** | 2.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `requests` | 9,459 |
 | 2 | `six` | 4,128 |
 | 3 | `numpy` | 3,540 |
@@ -39,7 +48,7 @@
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `cloudscript` | 120 |
 | 2 | `c7n-azure` | 105 |
 | 3 | `TEStribute` | 102 |
@@ -56,7 +65,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `requests` | 0.044330 |
 | 2 | `six` | 0.027790 |
 | 3 | `numpy` | 0.017058 |
@@ -68,27 +77,42 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `Django` | 0.004968 |
 | 10 | `pytz` | 0.004755 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `pytest` | 0.000004 |
-| 2 | `boto3` | 0.000002 |
-| 3 | `botocore` | 0.000002 |
-| 4 | `ipython` | 0.000002 |
-| 5 | `indy-node` | 0.000002 |
-| 6 | `oslo.messaging` | 0.000002 |
-| 7 | `importlib-metadata` | 0.000002 |
-| 8 | `azureml-core` | 0.000002 |
-| 9 | `Django` | 0.000001 |
-| 10 | `indy-plenum` | 0.000001 |
+|------|-----|-------------------|
+| 1 | `pytest` | 0.000005 |
+| 2 | `pantsbuild.pants` | 0.000004 |
+| 3 | `Sphinx` | 0.000003 |
+| 4 | `jupyter` | 0.000003 |
+| 5 | `Django` | 0.000003 |
+| 6 | `apache-airflow` | 0.000003 |
+| 7 | `google-api-python-client` | 0.000003 |
+| 8 | `neutron` | 0.000003 |
+| 9 | `twine` | 0.000002 |
+| 10 | `nbconvert` | 0.000002 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.038088 |
 | **Comunidades Detectadas (Louvain)** | 625 |
 | **Modularidade** | 0.5505 |
 
----
-*Análise concluída em 98.08 segundos.*
+## 6. Análise de Diâmetro
+| Métrica | Valor |
+|---------|-------|
+| **Diâmetro** | 3 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 4 nós (0.0%) |
+| **Interpretação** | Rede Altamente Conectada |
 
+## 7. Resumo Executivo
+Este grafo possui **46,668 nós** e **126,759 arestas**.
+O diâmetro aproximado é **3**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 96.8% dos nós, 
+com densidade de 0.000058.
+
+---
+*Análise concluída em 112.84 segundos.*

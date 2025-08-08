@@ -1,0 +1,207 @@
+{
+  "name": "Rubygems",
+  "nodes": 128010,
+  "edges": 578076,
+  "density": 3.527772225369165e-05,
+  "is_directed": true,
+  "scc_count": 127564,
+  "wcc_count": 366,
+  "largest_scc_size": 241,
+  "largest_wcc_size": 127085,
+  "lcc_nodes": 127085,
+  "lcc_percent": 99.27740020310914,
+  "lcc_edges": 577479,
+  "lcc_edges_percent": 99.8967263819982,
+  "avg_degree": 9.03173189594563,
+  "max_degree": 67703,
+  "degree_mean": 9.03173189594563,
+  "degree_median": 4.0,
+  "degree_max": 67703,
+  "avg_in_degree": 4.515865947972815,
+  "max_in_degree": 67698,
+  "in_degree_mean": 4.515865947972815,
+  "in_degree_median": 0.0,
+  "in_degree_max": 67698,
+  "avg_out_degree": 4.515865947972815,
+  "max_out_degree": 220,
+  "out_degree_mean": 4.515865947972815,
+  "out_degree_median": 4.0,
+  "out_degree_max": 220,
+  "top_in_degree": [
+    [
+      "rake",
+      67698
+    ],
+    [
+      "bundler",
+      59684
+    ],
+    [
+      "rspec",
+      48867
+    ],
+    [
+      "pry",
+      11179
+    ],
+    [
+      "rails",
+      10459
+    ],
+    [
+      "minitest",
+      9957
+    ],
+    [
+      "activesupport",
+      9846
+    ],
+    [
+      "simplecov",
+      9269
+    ],
+    [
+      "rubocop",
+      7460
+    ],
+    [
+      "sqlite3",
+      7260
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "aws-sdk-resources",
+      220
+    ],
+    [
+      "azure_sdk",
+      136
+    ],
+    [
+      "rubysl",
+      91
+    ],
+    [
+      "voluntary",
+      82
+    ],
+    [
+      "backedup",
+      82
+    ],
+    [
+      "workarea-core",
+      81
+    ],
+    [
+      "hyrax",
+      71
+    ],
+    [
+      "atreides",
+      68
+    ],
+    [
+      "renalware-core",
+      68
+    ],
+    [
+      "benmanns-atreides",
+      67
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "rake",
+      0.06916377967920483
+    ],
+    [
+      "bundler",
+      0.05695671501712876
+    ],
+    [
+      "rspec",
+      0.043198159114332196
+    ],
+    [
+      "minitest",
+      0.039396169655195316
+    ],
+    [
+      "rdoc",
+      0.036265139029894165
+    ],
+    [
+      "rubocop",
+      0.027407073130756146
+    ],
+    [
+      "hoe",
+      0.02589469605044822
+    ],
+    [
+      "rspec-expectations",
+      0.013111885311839138
+    ],
+    [
+      "activesupport",
+      0.013100051604126372
+    ],
+    [
+      "coveralls",
+      0.013083079349820925
+    ]
+  ],
+  "betweenness": [
+    [
+      "rubocop",
+      0.0010776347578094845
+    ],
+    [
+      "parser",
+      0.0010045088138381003
+    ],
+    [
+      "simplecov",
+      0.0007369330093019769
+    ],
+    [
+      "docile",
+      0.0007222544134236924
+    ],
+    [
+      "github-markup",
+      0.0007084841401541151
+    ],
+    [
+      "github-linguist",
+      0.000623635472668115
+    ],
+    [
+      "ast",
+      0.0005843359298727142
+    ],
+    [
+      "rake",
+      0.0005708857671355013
+    ],
+    [
+      "rest-client",
+      0.00047093900849091904
+    ],
+    [
+      "webmock",
+      0.0004594559269834046
+    ]
+  ],
+  "avg_clustering": 0.1970349720692655,
+  "communities": 420,
+  "modularity": 0.3968144253525551,
+  "diameter": 17,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 241,
+  "diameter_component_percent": 0.18826654167643153,
+  "elapsed_time": 2700.116988658905
+}

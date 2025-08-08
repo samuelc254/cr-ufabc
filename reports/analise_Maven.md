@@ -1,31 +1,40 @@
-# Análise do Grafo: Maven
+# Análise Completa do Grafo: Maven
 
-## 1. Métricas Gerais
+## 1. Métricas Básicas
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 122,532 |
-| **Arestas (Dependências)** | 540,840 |
-| **Densidade do Grafo** | 0.00003602 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Nós** | 122,532 |
+| **Arestas** | 540,840 |
+| **Densidade** | 0.00003602 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 1,561 |
-| **Nós no Maior Componente (LCC)** | 116,772 (95.30%) |
-| **Arestas no Maior Componente (LCC)** | 535,829 (99.07%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 121,912 |
+| **Componentes Fracamente Conectados (WCC)** | 1,561 |
+| **Maior SCC** | 272 nós |
+| **Maior WCC** | 116,772 nós |
+| **Nós no Maior Componente** | 116,772 (95.30%) |
+| **Arestas no Maior Componente** | 535,829 (99.07%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 4.41 | 4.41 | 8.83 |
-| **Mediana** | 1.00 | 3.00 | 4.00 |
-| **Máximo** | 24,159 | 856 | 24,161 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 8.83 |
+| **Grau Máximo** | 24,161 |
+| **Grau Mediano** | 4.00 |
+| **In-Degree Médio** | 4.41 |
+| **In-Degree Máximo** | 24,159 |
+| **In-Degree Mediano** | 1.00 |
+| **Out-Degree Médio** | 4.41 |
+| **Out-Degree Máximo** | 856 |
+| **Out-Degree Mediano** | 3.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `junit:junit` | 24,159 |
 | 2 | `org.scala-lang:scala-library` | 21,115 |
 | 3 | `org.slf4j:slf4j-api` | 9,723 |
@@ -39,7 +48,7 @@
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `org.springframework.boot:spring-boot-dependencies` | 856 |
 | 2 | `org.apache.camel:camel-spring-boot-dependencies` | 735 |
 | 3 | `org.apache.camel:apache-camel` | 219 |
@@ -56,7 +65,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `junit:junit` | 0.052650 |
 | 2 | `org.hamcrest:hamcrest-core` | 0.046822 |
 | 3 | `org.hamcrest:hamcrest` | 0.039004 |
@@ -68,27 +77,42 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `com.novocode:junit-interface` | 0.007025 |
 | 10 | `org.jacoco:org.jacoco.agent` | 0.005935 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `org.testng:testng` | 0.003586 |
-| 2 | `org.springframework:spring-test` | 0.002837 |
-| 3 | `org.assertj:assertj-core` | 0.002766 |
-| 4 | `com.github.marschall:memoryfilesystem` | 0.002715 |
-| 5 | `org.springframework:spring-webflux` | 0.001766 |
-| 6 | `org.springframework:spring-context-support` | 0.001110 |
-| 7 | `org.yaml:snakeyaml` | 0.001069 |
-| 8 | `org.easymock:easymock` | 0.001046 |
-| 9 | `io.projectreactor.netty:reactor-netty` | 0.000830 |
-| 10 | `org.scalatest:scalatest_2.12` | 0.000778 |
+|------|-----|-------------------|
+| 1 | `org.testng:testng` | 0.003492 |
+| 2 | `org.springframework:spring-test` | 0.002801 |
+| 3 | `org.assertj:assertj-core` | 0.002579 |
+| 4 | `com.github.marschall:memoryfilesystem` | 0.002553 |
+| 5 | `org.springframework:spring-webflux` | 0.001755 |
+| 6 | `org.springframework:spring-context-support` | 0.001067 |
+| 7 | `org.yaml:snakeyaml` | 0.001019 |
+| 8 | `org.easymock:easymock` | 0.000995 |
+| 9 | `io.projectreactor.netty:reactor-netty` | 0.000797 |
+| 10 | `io.micrometer:micrometer-core` | 0.000716 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.109379 |
 | **Comunidades Detectadas (Louvain)** | 1,807 |
 | **Modularidade** | 0.6091 |
 
----
-*Análise concluída em 624.92 segundos.*
+## 6. Análise de Diâmetro
+| Métrica | Valor |
+|---------|-------|
+| **Diâmetro** | 23 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 272 nós (0.2%) |
+| **Interpretação** | Rede Dispersa |
 
+## 7. Resumo Executivo
+Este grafo possui **122,532 nós** e **540,840 arestas**.
+O diâmetro aproximado é **23**, indicando que 
+a rede apresenta conectividade mais dispersa.
+
+O maior componente conectado contém 95.3% dos nós, 
+com densidade de 0.000036.
+
+---
+*Análise concluída em 616.63 segundos.*

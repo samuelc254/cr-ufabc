@@ -1,31 +1,40 @@
-# Análise do Grafo: Geral
+# Análise Completa do Grafo: Geral
 
-## 1. Métricas Gerais
+## 1. Métricas Básicas
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 1,758,429 |
-| **Arestas (Dependências)** | 14,078,099 |
-| **Densidade do Grafo** | 0.00000455 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Nós** | 1,758,429 |
+| **Arestas** | 14,078,099 |
+| **Densidade** | 0.00000455 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 11,301 |
-| **Nós no Maior Componente (LCC)** | 1,604,174 (91.23%) |
-| **Arestas no Maior Componente (LCC)** | 13,504,283 (95.92%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 1,730,853 |
+| **Componentes Fracamente Conectados (WCC)** | 11,301 |
+| **Maior SCC** | 18,413 nós |
+| **Maior WCC** | 1,604,174 nós |
+| **Nós no Maior Componente** | 1,604,174 (91.23%) |
+| **Arestas no Maior Componente** | 13,504,283 (95.92%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 8.01 | 8.01 | 16.01 |
-| **Mediana** | 0.00 | 4.00 | 5.00 |
-| **Máximo** | 192,961 | 1,000 | 193,045 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 16.01 |
+| **Grau Máximo** | 193,045 |
+| **Grau Mediano** | 5.00 |
+| **In-Degree Médio** | 8.01 |
+| **In-Degree Máximo** | 192,961 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 8.01 |
+| **Out-Degree Máximo** | 1,000 |
+| **Out-Degree Mediano** | 4.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `mocha` | 192,961 |
 | 2 | `eslint` | 177,661 |
 | 3 | `typescript` | 128,561 |
@@ -39,7 +48,7 @@
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `sindresorhus.js` | 1,000 |
 | 2 | `npm-bomb` | 999 |
 | 3 | `1000-packages` | 999 |
@@ -56,32 +65,47 @@ _(Análise realizada em uma amostra de 200,000 nós do maior componente (Between
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
-| 1 | `mkdirp` | 0.019664 |
-| 2 | `mock-fs` | 0.019409 |
-| 3 | `eslint-plugin-import` | 0.016975 |
-| 4 | `jest` | 0.016138 |
-| 5 | `babel-core` | 0.014131 |
-| 6 | `rspec` | 0.013571 |
-| 7 | `webpack` | 0.012042 |
-| 8 | `sinon` | 0.011489 |
-| 9 | `istanbul` | 0.011411 |
-| 10 | `@babel/preset-env` | 0.011333 |
+|------|-----|----------------|
+| 1 | `typescript` | 0.035260 |
+| 2 | `rimraf` | 0.022145 |
+| 3 | `rake` | 0.019209 |
+| 4 | `should` | 0.013553 |
+| 5 | `husky` | 0.011594 |
+| 6 | `nyc` | 0.011314 |
+| 7 | `express` | 0.009337 |
+| 8 | `debug` | 0.008063 |
+| 9 | `karma` | 0.007316 |
+| 10 | `prop-types` | 0.006701 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `rollup` | 0.000049 |
-| 2 | `webpack` | 0.000046 |
-| 3 | `async` | 0.000043 |
-| 4 | `core-js` | 0.000027 |
-| 5 | `eslint-plugin-import` | 0.000026 |
-| 6 | `karma` | 0.000026 |
-| 7 | `@babel/preset-env` | 0.000025 |
-| 8 | `istanbul` | 0.000023 |
-| 9 | `airtap` | 0.000021 |
-| 10 | `redux` | 0.000019 |
+|------|-----|-------------------|
+| 1 | `typescript` | 0.000039 |
+| 2 | `node-fetch` | 0.000015 |
+| 3 | `karma` | 0.000014 |
+| 4 | `gulp-rename` | 0.000013 |
+| 5 | `husky` | 0.000012 |
+| 6 | `jscs` | 0.000012 |
+| 7 | `abort-controller` | 0.000012 |
+| 8 | `express` | 0.000010 |
+| 9 | `should` | 0.000008 |
+| 10 | `range-parser` | 0.000005 |
+
+## 6. Análise de Diâmetro
+| Métrica | Valor |
+|---------|-------|
+| **Diâmetro** | 30 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 18,413 nós (1.0%) |
+| **Interpretação** | Rede Dispersa |
+
+## 7. Resumo Executivo
+Este grafo possui **1,758,429 nós** e **14,078,099 arestas**.
+O diâmetro aproximado é **30**, indicando que 
+a rede apresenta conectividade mais dispersa.
+
+O maior componente conectado contém 91.2% dos nós, 
+com densidade de 0.000005.
 
 ---
-*Análise concluída em 1554.93 segundos.*
-
+*Análise concluída em 1541.54 segundos.*

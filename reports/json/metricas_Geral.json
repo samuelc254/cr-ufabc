@@ -1,0 +1,204 @@
+{
+  "name": "Geral",
+  "nodes": 1758429,
+  "edges": 14078099,
+  "density": 4.552967883948916e-06,
+  "is_directed": true,
+  "scc_count": 1730853,
+  "wcc_count": 11301,
+  "largest_scc_size": 18413,
+  "largest_wcc_size": 1604174,
+  "lcc_nodes": 1604174,
+  "lcc_percent": 91.22768107213882,
+  "lcc_edges": 13504283,
+  "lcc_edges_percent": 95.92405196184514,
+  "avg_degree": 16.012132420473048,
+  "max_degree": 193045,
+  "degree_mean": 16.012132420473048,
+  "degree_median": 5.0,
+  "degree_max": 193045,
+  "avg_in_degree": 8.006066210236524,
+  "max_in_degree": 192961,
+  "in_degree_mean": 8.006066210236524,
+  "in_degree_median": 0.0,
+  "in_degree_max": 192961,
+  "avg_out_degree": 8.006066210236524,
+  "max_out_degree": 1000,
+  "out_degree_mean": 8.006066210236524,
+  "out_degree_median": 4.0,
+  "out_degree_max": 1000,
+  "top_in_degree": [
+    [
+      "mocha",
+      192961
+    ],
+    [
+      "eslint",
+      177661
+    ],
+    [
+      "typescript",
+      128561
+    ],
+    [
+      "chai",
+      117227
+    ],
+    [
+      "webpack",
+      116054
+    ],
+    [
+      "babel-core",
+      111311
+    ],
+    [
+      "babel-loader",
+      99137
+    ],
+    [
+      "react",
+      95553
+    ],
+    [
+      "lodash",
+      93358
+    ],
+    [
+      "jest",
+      88218
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "sindresorhus.js",
+      1000
+    ],
+    [
+      "npm-bomb",
+      999
+    ],
+    [
+      "1000-packages",
+      999
+    ],
+    [
+      "all-of-them",
+      989
+    ],
+    [
+      "digital-keyboard-demos",
+      975
+    ],
+    [
+      "@hawkingnetwork/react-native-tab-view",
+      921
+    ],
+    [
+      "@ericmcornelius/ease",
+      905
+    ],
+    [
+      "vue-compment",
+      895
+    ],
+    [
+      "nois-react-toast",
+      873
+    ],
+    [
+      "org.springframework.boot:spring-boot-dependencies",
+      856
+    ]
+  ],
+  "centrality_info": "uma amostra de 200,000 n\u00f3s do maior componente (Betweenness aproximado com k=1000)",
+  "pagerank": [
+    [
+      "typescript",
+      0.03525963914466514
+    ],
+    [
+      "rimraf",
+      0.022145387489061863
+    ],
+    [
+      "rake",
+      0.01920940651865009
+    ],
+    [
+      "should",
+      0.013553467338064345
+    ],
+    [
+      "husky",
+      0.011594165409374177
+    ],
+    [
+      "nyc",
+      0.0113143000972634
+    ],
+    [
+      "express",
+      0.009337233297027734
+    ],
+    [
+      "debug",
+      0.008062595172920961
+    ],
+    [
+      "karma",
+      0.007316265534488546
+    ],
+    [
+      "prop-types",
+      0.0067011798296543745
+    ]
+  ],
+  "betweenness": [
+    [
+      "typescript",
+      3.8560885608856096e-05
+    ],
+    [
+      "node-fetch",
+      1.495548288816221e-05
+    ],
+    [
+      "karma",
+      1.4022473558068914e-05
+    ],
+    [
+      "gulp-rename",
+      1.3396633966339666e-05
+    ],
+    [
+      "husky",
+      1.2377457107904415e-05
+    ],
+    [
+      "jscs",
+      1.1917619176191763e-05
+    ],
+    [
+      "abort-controller",
+      1.1843618436184363e-05
+    ],
+    [
+      "express",
+      9.76293096264296e-06
+    ],
+    [
+      "should",
+      8.47708477084771e-06
+    ],
+    [
+      "range-parser",
+      5.316469831364981e-06
+    ]
+  ],
+  "diameter": 30,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 18413,
+  "diameter_component_percent": 1.0471278624272007,
+  "elapsed_time": 1541.5422332286835
+}

@@ -1,0 +1,207 @@
+{
+  "name": "Pypi",
+  "nodes": 46668,
+  "edges": 126759,
+  "density": 5.8203584553979486e-05,
+  "is_directed": true,
+  "scc_count": 46642,
+  "wcc_count": 577,
+  "largest_scc_size": 4,
+  "largest_wcc_size": 45180,
+  "lcc_nodes": 45180,
+  "lcc_percent": 96.81151967086655,
+  "lcc_edges": 125754,
+  "lcc_edges_percent": 99.20715688826829,
+  "avg_degree": 5.4323733607611215,
+  "max_degree": 9459,
+  "degree_mean": 5.4323733607611215,
+  "degree_median": 2.0,
+  "degree_max": 9459,
+  "avg_in_degree": 2.7161866803805608,
+  "max_in_degree": 9459,
+  "in_degree_mean": 2.7161866803805608,
+  "in_degree_median": 0.0,
+  "in_degree_max": 9459,
+  "avg_out_degree": 2.7161866803805608,
+  "max_out_degree": 120,
+  "out_degree_mean": 2.7161866803805608,
+  "out_degree_median": 2.0,
+  "out_degree_max": 120,
+  "top_in_degree": [
+    [
+      "requests",
+      9459
+    ],
+    [
+      "six",
+      4128
+    ],
+    [
+      "numpy",
+      3540
+    ],
+    [
+      "click",
+      2174
+    ],
+    [
+      "setuptools",
+      1851
+    ],
+    [
+      "python-dateutil",
+      1621
+    ],
+    [
+      "pyyaml",
+      1520
+    ],
+    [
+      "PyYAML",
+      1295
+    ],
+    [
+      "lxml",
+      1157
+    ],
+    [
+      "pandas",
+      1069
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "cloudscript",
+      120
+    ],
+    [
+      "c7n-azure",
+      105
+    ],
+    [
+      "TEStribute",
+      102
+    ],
+    [
+      "nucypher",
+      96
+    ],
+    [
+      "cateye",
+      72
+    ],
+    [
+      "mycloud-cli",
+      71
+    ],
+    [
+      "cloudview",
+      69
+    ],
+    [
+      "nova",
+      68
+    ],
+    [
+      "ML-Navigator",
+      68
+    ],
+    [
+      "rucio",
+      63
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "requests",
+      0.04432999993732068
+    ],
+    [
+      "six",
+      0.027790001902504958
+    ],
+    [
+      "numpy",
+      0.0170581828301862
+    ],
+    [
+      "setuptools",
+      0.01094812735043215
+    ],
+    [
+      "click",
+      0.00799706576438574
+    ],
+    [
+      "python-dateutil",
+      0.00566489078581264
+    ],
+    [
+      "django",
+      0.005295688540167205
+    ],
+    [
+      "pyyaml",
+      0.00513495874223374
+    ],
+    [
+      "Django",
+      0.004967595268142882
+    ],
+    [
+      "pytz",
+      0.0047545766545371215
+    ]
+  ],
+  "betweenness": [
+    [
+      "pytest",
+      5.467262827039709e-06
+    ],
+    [
+      "pantsbuild.pants",
+      4.028509451502944e-06
+    ],
+    [
+      "Sphinx",
+      3.128366313987634e-06
+    ],
+    [
+      "jupyter",
+      2.9217760857054316e-06
+    ],
+    [
+      "Django",
+      2.855372083757581e-06
+    ],
+    [
+      "apache-airflow",
+      2.78896808180973e-06
+    ],
+    [
+      "google-api-python-client",
+      2.6340254105980787e-06
+    ],
+    [
+      "neutron",
+      2.5570459564881634e-06
+    ],
+    [
+      "twine",
+      2.043767615506072e-06
+    ],
+    [
+      "nbconvert",
+      1.7929080525919695e-06
+    ]
+  ],
+  "avg_clustering": 0.03808813026633685,
+  "communities": 625,
+  "modularity": 0.5504576308636713,
+  "diameter": 3,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 4,
+  "diameter_component_percent": 0.008571183680466271,
+  "elapsed_time": 112.84437441825867
+}

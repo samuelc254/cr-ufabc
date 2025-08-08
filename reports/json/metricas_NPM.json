@@ -1,0 +1,207 @@
+{
+  "name": "NPM",
+  "nodes": 1036048,
+  "edges": 11134428,
+  "density": 1.0373100296718783e-05,
+  "is_directed": true,
+  "scc_count": 1016856,
+  "wcc_count": 4316,
+  "largest_scc_size": 13026,
+  "largest_wcc_size": 1022526,
+  "lcc_nodes": 1022526,
+  "lcc_percent": 98.69484811514523,
+  "lcc_edges": 11119666,
+  "lcc_edges_percent": 99.86742022131716,
+  "avg_degree": 21.49403888622921,
+  "max_degree": 189648,
+  "degree_mean": 21.49403888622921,
+  "degree_median": 7.0,
+  "degree_max": 189648,
+  "avg_in_degree": 10.747019443114604,
+  "max_in_degree": 189564,
+  "in_degree_mean": 10.747019443114604,
+  "in_degree_median": 0.0,
+  "in_degree_max": 189564,
+  "avg_out_degree": 10.747019443114604,
+  "max_out_degree": 1000,
+  "out_degree_mean": 10.747019443114604,
+  "out_degree_median": 6.0,
+  "out_degree_max": 1000,
+  "top_in_degree": [
+    [
+      "mocha",
+      189564
+    ],
+    [
+      "eslint",
+      177187
+    ],
+    [
+      "typescript",
+      128457
+    ],
+    [
+      "chai",
+      117181
+    ],
+    [
+      "webpack",
+      116019
+    ],
+    [
+      "babel-core",
+      111274
+    ],
+    [
+      "babel-loader",
+      99117
+    ],
+    [
+      "react",
+      95439
+    ],
+    [
+      "lodash",
+      93109
+    ],
+    [
+      "jest",
+      88203
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "sindresorhus.js",
+      1000
+    ],
+    [
+      "npm-bomb",
+      999
+    ],
+    [
+      "1000-packages",
+      999
+    ],
+    [
+      "all-of-them",
+      989
+    ],
+    [
+      "digital-keyboard-demos",
+      975
+    ],
+    [
+      "@hawkingnetwork/react-native-tab-view",
+      921
+    ],
+    [
+      "@ericmcornelius/ease",
+      905
+    ],
+    [
+      "vue-compment",
+      895
+    ],
+    [
+      "nois-react-toast",
+      873
+    ],
+    [
+      "@vuga/react-demo",
+      846
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "mocha",
+      0.021679055501369306
+    ],
+    [
+      "eslint",
+      0.014611385918516719
+    ],
+    [
+      "chai",
+      0.007348740148493626
+    ],
+    [
+      "tslib",
+      0.007247348587140895
+    ],
+    [
+      "typescript",
+      0.00692200948494945
+    ],
+    [
+      "tape",
+      0.006881950580013816
+    ],
+    [
+      "@types/node",
+      0.006783505960980103
+    ],
+    [
+      "lodash",
+      0.006597052807870784
+    ],
+    [
+      "tap",
+      0.006302626169951533
+    ],
+    [
+      "rimraf",
+      0.00575480577457408
+    ]
+  ],
+  "betweenness": [
+    [
+      "mocha",
+      0.0029670188028472315
+    ],
+    [
+      "eslint",
+      0.002386835954440186
+    ],
+    [
+      "typescript",
+      0.0013365562538418946
+    ],
+    [
+      "webpack",
+      0.0008484889792580148
+    ],
+    [
+      "electron",
+      0.0006876137578375822
+    ],
+    [
+      "@electron/get",
+      0.0006866856900554229
+    ],
+    [
+      "global-agent",
+      0.0006814253358467081
+    ],
+    [
+      "airtap",
+      0.0006663160197808072
+    ],
+    [
+      "anyproxy",
+      0.0006580116313658962
+    ],
+    [
+      "antd",
+      0.0006578138749747101
+    ]
+  ],
+  "avg_clustering": 0.1235550197595705,
+  "communities": 5428,
+  "modularity": 0.48484726494724373,
+  "diameter": 25,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 13026,
+  "diameter_component_percent": 1.2572776550893394,
+  "elapsed_time": 71351.2546236515
+}

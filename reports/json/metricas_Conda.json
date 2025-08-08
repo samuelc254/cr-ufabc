@@ -1,0 +1,207 @@
+{
+  "name": "Conda",
+  "nodes": 1270,
+  "edges": 2866,
+  "density": 0.0017783238088146783,
+  "is_directed": true,
+  "scc_count": 1270,
+  "wcc_count": 63,
+  "largest_scc_size": 1,
+  "largest_wcc_size": 959,
+  "lcc_nodes": 959,
+  "lcc_percent": 75.51181102362204,
+  "lcc_edges": 2565,
+  "lcc_edges_percent": 89.49755757152826,
+  "avg_degree": 4.513385826771653,
+  "max_degree": 546,
+  "degree_mean": 4.513385826771653,
+  "degree_median": 2.0,
+  "degree_max": 546,
+  "avg_in_degree": 2.2566929133858267,
+  "max_in_degree": 536,
+  "in_degree_mean": 2.2566929133858267,
+  "in_degree_median": 1.0,
+  "in_degree_max": 536,
+  "avg_out_degree": 2.2566929133858267,
+  "max_out_degree": 275,
+  "out_degree_mean": 2.2566929133858267,
+  "out_degree_median": 1.0,
+  "out_degree_max": 275,
+  "top_in_degree": [
+    [
+      "python",
+      536
+    ],
+    [
+      "libgcc-ng",
+      327
+    ],
+    [
+      "libstdcxx-ng",
+      144
+    ],
+    [
+      "numpy",
+      77
+    ],
+    [
+      "zlib",
+      64
+    ],
+    [
+      "six",
+      36
+    ],
+    [
+      "openssl",
+      28
+    ],
+    [
+      "requests",
+      22
+    ],
+    [
+      "tornado",
+      20
+    ],
+    [
+      "pandas",
+      18
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "anaconda",
+      275
+    ],
+    [
+      "libgdal",
+      31
+    ],
+    [
+      "graphviz",
+      21
+    ],
+    [
+      "orange3",
+      19
+    ],
+    [
+      "vtk",
+      16
+    ],
+    [
+      "tensorflow-base",
+      16
+    ],
+    [
+      "scikit-image",
+      15
+    ],
+    [
+      "wxpython",
+      15
+    ],
+    [
+      "docker-py",
+      14
+    ],
+    [
+      "scikit-bio",
+      14
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "python",
+      0.13232452717821983
+    ],
+    [
+      "libgcc-ng",
+      0.12256066548037475
+    ],
+    [
+      "_libgcc_mutex",
+      0.10445611223787415
+    ],
+    [
+      "libstdcxx-ng",
+      0.03792782056706121
+    ],
+    [
+      "zlib",
+      0.022326598912576805
+    ],
+    [
+      "ncurses",
+      0.019351350049811766
+    ],
+    [
+      "openssl",
+      0.014254087456243947
+    ],
+    [
+      "xz",
+      0.01286810200728848
+    ],
+    [
+      "tk",
+      0.012196494619598843
+    ],
+    [
+      "readline",
+      0.011881256368323014
+    ]
+  ],
+  "betweenness": [
+    [
+      "python",
+      0.007259128228093744
+    ],
+    [
+      "libgcc-ng",
+      0.000866937637029545
+    ],
+    [
+      "sqlite",
+      0.0006669453152211772
+    ],
+    [
+      "numpy",
+      0.0005847391653486601
+    ],
+    [
+      "libmxnet",
+      0.00023928944618599788
+    ],
+    [
+      "libopencv",
+      0.00021316614420062693
+    ],
+    [
+      "mxnet",
+      0.00019265280822878777
+    ],
+    [
+      "bokeh",
+      0.00018570930984724085
+    ],
+    [
+      "notebook",
+      0.00016005373936408418
+    ],
+    [
+      "dask",
+      0.00015495986748837278
+    ]
+  ],
+  "avg_clustering": 0.1568428330775244,
+  "communities": 74,
+  "modularity": 0.5542260026715508,
+  "diameter": 0,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 1,
+  "diameter_component_percent": 0.07874015748031496,
+  "elapsed_time": 1.48472261428833
+}

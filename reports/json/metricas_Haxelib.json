@@ -1,0 +1,207 @@
+{
+  "name": "Haxelib",
+  "nodes": 638,
+  "edges": 880,
+  "density": 0.0021653223623666973,
+  "is_directed": true,
+  "scc_count": 636,
+  "wcc_count": 49,
+  "largest_scc_size": 2,
+  "largest_wcc_size": 500,
+  "lcc_nodes": 500,
+  "lcc_percent": 78.36990595611285,
+  "lcc_edges": 751,
+  "lcc_edges_percent": 85.3409090909091,
+  "avg_degree": 2.7586206896551726,
+  "max_degree": 75,
+  "degree_mean": 2.7586206896551726,
+  "degree_median": 2.0,
+  "degree_max": 75,
+  "avg_in_degree": 1.3793103448275863,
+  "max_in_degree": 75,
+  "in_degree_mean": 1.3793103448275863,
+  "in_degree_median": 0.0,
+  "in_degree_max": 75,
+  "avg_out_degree": 1.3793103448275863,
+  "max_out_degree": 11,
+  "out_degree_mean": 1.3793103448275863,
+  "out_degree_median": 1.0,
+  "out_degree_max": 11,
+  "top_in_degree": [
+    [
+      "openfl",
+      75
+    ],
+    [
+      "tink_core",
+      34
+    ],
+    [
+      "hxnodejs",
+      32
+    ],
+    [
+      "tink_macro",
+      27
+    ],
+    [
+      "thx.core",
+      17
+    ],
+    [
+      "lime",
+      15
+    ],
+    [
+      "actuate",
+      15
+    ],
+    [
+      "msignal",
+      15
+    ],
+    [
+      "hscript",
+      14
+    ],
+    [
+      "promhx",
+      13
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "prime",
+      11
+    ],
+    [
+      "wighawag-game-utils",
+      10
+    ],
+    [
+      "prime-css",
+      9
+    ],
+    [
+      "ufront",
+      8
+    ],
+    [
+      "ufront-client",
+      8
+    ],
+    [
+      "prime-components",
+      8
+    ],
+    [
+      "fonthx",
+      7
+    ],
+    [
+      "ufront-ufadmin",
+      6
+    ],
+    [
+      "ufront-uftasks",
+      6
+    ],
+    [
+      "prime-display",
+      6
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "tink_core",
+      0.05893510353510544
+    ],
+    [
+      "openfl",
+      0.0534992638779353
+    ],
+    [
+      "tink_macro",
+      0.028627601345739398
+    ],
+    [
+      "hxnodejs",
+      0.02548575371698342
+    ],
+    [
+      "thx.core",
+      0.013289236093146953
+    ],
+    [
+      "hscript",
+      0.010954092420996337
+    ],
+    [
+      "react-native",
+      0.0099991038222009
+    ],
+    [
+      "lime",
+      0.009921987626143946
+    ],
+    [
+      "hxcpp",
+      0.009179691126118751
+    ],
+    [
+      "monax",
+      0.008624137871227771
+    ]
+  ],
+  "betweenness": [
+    [
+      "tink_http",
+      0.00023809332185119908
+    ],
+    [
+      "hexinject",
+      0.0002132779615455811
+    ],
+    [
+      "hexannotation",
+      0.00019315739913562064
+    ],
+    [
+      "coconut.ui",
+      0.00018349952917883958
+    ],
+    [
+      "hexreflection",
+      0.00016498861176167596
+    ],
+    [
+      "tink_macro",
+      0.00016123277344515003
+    ],
+    [
+      "hexcore",
+      0.00015291627431569967
+    ],
+    [
+      "tink_io",
+      0.00012139405987342823
+    ],
+    [
+      "tink_syntaxhub",
+      0.00010798035160012126
+    ],
+    [
+      "tink_hxx",
+      7.766537090244745e-05
+    ]
+  ],
+  "avg_clustering": 0.06803388977113273,
+  "communities": 65,
+  "modularity": 0.8334697567986883,
+  "diameter": 1,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 2,
+  "diameter_component_percent": 0.3134796238244514,
+  "elapsed_time": 0.6106436252593994
+}

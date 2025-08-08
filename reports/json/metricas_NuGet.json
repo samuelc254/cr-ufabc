@@ -1,0 +1,207 @@
+{
+  "name": "NuGet",
+  "nodes": 150103,
+  "edges": 412687,
+  "density": 1.83166032007708e-05,
+  "is_directed": true,
+  "scc_count": 150051,
+  "wcc_count": 2957,
+  "largest_scc_size": 7,
+  "largest_wcc_size": 139801,
+  "lcc_nodes": 139801,
+  "lcc_percent": 93.13671279055049,
+  "lcc_edges": 402791,
+  "lcc_edges_percent": 97.60205676456975,
+  "avg_degree": 5.4987175472841985,
+  "max_degree": 24996,
+  "degree_mean": 5.4987175472841985,
+  "degree_median": 2.0,
+  "degree_max": 24996,
+  "avg_in_degree": 2.7493587736420992,
+  "max_in_degree": 24990,
+  "in_degree_mean": 2.7493587736420992,
+  "in_degree_median": 0.0,
+  "in_degree_max": 24990,
+  "avg_out_degree": 2.7493587736420992,
+  "max_out_degree": 179,
+  "out_degree_mean": 2.7493587736420992,
+  "out_degree_median": 2.0,
+  "out_degree_max": 179,
+  "top_in_degree": [
+    [
+      "Newtonsoft.Json",
+      24990
+    ],
+    [
+      "NETStandard.Library",
+      12827
+    ],
+    [
+      "EntityFramework",
+      4983
+    ],
+    [
+      "Microsoft.Extensions.DependencyInjection",
+      2709
+    ],
+    [
+      "log4net",
+      2634
+    ],
+    [
+      "Microsoft.Extensions.DependencyInjection.Abstractions",
+      2588
+    ],
+    [
+      "Microsoft.CSharp",
+      2561
+    ],
+    [
+      "Microsoft.EntityFrameworkCore",
+      2221
+    ],
+    [
+      "Microsoft.AspNet.Mvc",
+      2158
+    ],
+    [
+      "System.ValueTuple",
+      1938
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "Dynamicweb.Admin",
+      179
+    ],
+    [
+      "Bupa.Api.Common.AspNetCore",
+      176
+    ],
+    [
+      "SDK.All",
+      168
+    ],
+    [
+      "Microsoft.AspNetCore.App",
+      150
+    ],
+    [
+      "Axle.Web.WebSharper.All",
+      133
+    ],
+    [
+      "Cireson.AssetManagement.Core",
+      117
+    ],
+    [
+      "uIntra",
+      109
+    ],
+    [
+      "Microsoft.ASPNETCore.All",
+      104
+    ],
+    [
+      "VisualStudio.Extensibility.Common",
+      101
+    ],
+    [
+      "Uintra",
+      100
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "Microsoft.NETCore.Targets",
+      0.08769631017803252
+    ],
+    [
+      "Microsoft.NETCore.Platforms",
+      0.06192718038146074
+    ],
+    [
+      "System.Runtime",
+      0.04827511998329237
+    ],
+    [
+      "NETStandard.Library",
+      0.034653862834402645
+    ],
+    [
+      "Newtonsoft.Json",
+      0.023716967752429163
+    ],
+    [
+      "Microsoft.NETCore.Targets.UniversalWindowsPlatform",
+      0.012394855827158048
+    ],
+    [
+      "Microsoft.NETCore.Targets.NETFramework",
+      0.012394855827158048
+    ],
+    [
+      "Microsoft.NETCore.Targets.DNXCore",
+      0.012393435793071143
+    ],
+    [
+      "System.Resources.ResourceManager",
+      0.010640519467429535
+    ],
+    [
+      "System.Reflection",
+      0.00815454239874866
+    ]
+  ],
+  "betweenness": [
+    [
+      "NETStandard.Library",
+      0.0003074604420786159
+    ],
+    [
+      "Newtonsoft.Json",
+      0.00012556452228782355
+    ],
+    [
+      "EntityFramework",
+      7.973893410505477e-05
+    ],
+    [
+      "runtime.native.System.Security.Cryptography.OpenSsl",
+      7.875592815399252e-05
+    ],
+    [
+      "System.Net.Http",
+      5.549453593159787e-05
+    ],
+    [
+      "EntityFramework.Commands",
+      4.901713570813283e-05
+    ],
+    [
+      "System.Security.Cryptography.X509Certificates",
+      3.4296498135971774e-05
+    ],
+    [
+      "System.Security.Cryptography.Algorithms",
+      3.0972634557773915e-05
+    ],
+    [
+      "Microsoft.AspNet.Mvc",
+      2.7996062862700266e-05
+    ],
+    [
+      "Microsoft.AspNet.Hosting",
+      2.4489207731514023e-05
+    ]
+  ],
+  "avg_clustering": 0.08623660925634938,
+  "communities": 3185,
+  "modularity": 0.6805587577306474,
+  "diameter": 5,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 7,
+  "diameter_component_percent": 0.004663464421097513,
+  "elapsed_time": 444.05070638656616
+}

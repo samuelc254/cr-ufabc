@@ -1,31 +1,40 @@
-# Análise do Grafo: NuGet
+# Análise Completa do Grafo: NuGet
 
-## 1. Métricas Gerais
+## 1. Métricas Básicas
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 150,103 |
-| **Arestas (Dependências)** | 412,687 |
-| **Densidade do Grafo** | 0.00001832 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Nós** | 150,103 |
+| **Arestas** | 412,687 |
+| **Densidade** | 0.00001832 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 2,957 |
-| **Nós no Maior Componente (LCC)** | 139,801 (93.14%) |
-| **Arestas no Maior Componente (LCC)** | 402,791 (97.60%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 150,051 |
+| **Componentes Fracamente Conectados (WCC)** | 2,957 |
+| **Maior SCC** | 7 nós |
+| **Maior WCC** | 139,801 nós |
+| **Nós no Maior Componente** | 139,801 (93.14%) |
+| **Arestas no Maior Componente** | 402,791 (97.60%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 2.75 | 2.75 | 5.50 |
-| **Mediana** | 0.00 | 2.00 | 2.00 |
-| **Máximo** | 24,990 | 179 | 24,996 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 5.50 |
+| **Grau Máximo** | 24,996 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 2.75 |
+| **In-Degree Máximo** | 24,990 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 2.75 |
+| **Out-Degree Máximo** | 179 |
+| **Out-Degree Mediano** | 2.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `Newtonsoft.Json` | 24,990 |
 | 2 | `NETStandard.Library` | 12,827 |
 | 3 | `EntityFramework` | 4,983 |
@@ -39,7 +48,7 @@
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `Dynamicweb.Admin` | 179 |
 | 2 | `Bupa.Api.Common.AspNetCore` | 176 |
 | 3 | `SDK.All` | 168 |
@@ -56,7 +65,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `Microsoft.NETCore.Targets` | 0.087696 |
 | 2 | `Microsoft.NETCore.Platforms` | 0.061927 |
 | 3 | `System.Runtime` | 0.048275 |
@@ -68,27 +77,42 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `System.Resources.ResourceManager` | 0.010641 |
 | 10 | `System.Reflection` | 0.008155 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `NETStandard.Library` | 0.000298 |
-| 2 | `Newtonsoft.Json` | 0.000104 |
-| 3 | `runtime.native.System.Security.Cryptography.OpenSsl` | 0.000079 |
-| 4 | `EntityFramework` | 0.000077 |
-| 5 | `System.Net.Http` | 0.000054 |
-| 6 | `EntityFramework.Commands` | 0.000046 |
-| 7 | `Microsoft.NETCore.UniversalWindowsPlatform` | 0.000036 |
-| 8 | `System.Security.Cryptography.X509Certificates` | 0.000034 |
-| 9 | `Microsoft.AspNet.Mvc` | 0.000033 |
-| 10 | `System.Security.Cryptography.Algorithms` | 0.000031 |
+|------|-----|-------------------|
+| 1 | `NETStandard.Library` | 0.000307 |
+| 2 | `Newtonsoft.Json` | 0.000126 |
+| 3 | `EntityFramework` | 0.000080 |
+| 4 | `runtime.native.System.Security.Cryptography.OpenSsl` | 0.000079 |
+| 5 | `System.Net.Http` | 0.000055 |
+| 6 | `EntityFramework.Commands` | 0.000049 |
+| 7 | `System.Security.Cryptography.X509Certificates` | 0.000034 |
+| 8 | `System.Security.Cryptography.Algorithms` | 0.000031 |
+| 9 | `Microsoft.AspNet.Mvc` | 0.000028 |
+| 10 | `Microsoft.AspNet.Hosting` | 0.000024 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.086237 |
 | **Comunidades Detectadas (Louvain)** | 3,185 |
 | **Modularidade** | 0.6806 |
 
----
-*Análise concluída em 508.99 segundos.*
+## 6. Análise de Diâmetro
+| Métrica | Valor |
+|---------|-------|
+| **Diâmetro** | 5 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 7 nós (0.0%) |
+| **Interpretação** | Rede Altamente Conectada |
 
+## 7. Resumo Executivo
+Este grafo possui **150,103 nós** e **412,687 arestas**.
+O diâmetro aproximado é **5**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 93.1% dos nós, 
+com densidade de 0.000018.
+
+---
+*Análise concluída em 444.05 segundos.*

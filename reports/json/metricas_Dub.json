@@ -1,0 +1,207 @@
+{
+  "name": "Dub",
+  "nodes": 1161,
+  "edges": 1383,
+  "density": 0.0010269090261071014,
+  "is_directed": true,
+  "scc_count": 1161,
+  "wcc_count": 93,
+  "largest_scc_size": 1,
+  "largest_wcc_size": 780,
+  "lcc_nodes": 780,
+  "lcc_percent": 67.18346253229974,
+  "lcc_edges": 1076,
+  "lcc_edges_percent": 77.80187997107737,
+  "avg_degree": 2.3824289405684755,
+  "max_degree": 76,
+  "degree_mean": 2.3824289405684755,
+  "degree_median": 1.0,
+  "degree_max": 76,
+  "avg_in_degree": 1.1912144702842378,
+  "max_in_degree": 70,
+  "in_degree_mean": 1.1912144702842378,
+  "in_degree_median": 1.0,
+  "in_degree_max": 70,
+  "avg_out_degree": 1.1912144702842378,
+  "max_out_degree": 21,
+  "out_degree_mean": 1.1912144702842378,
+  "out_degree_median": 1.0,
+  "out_degree_max": 21,
+  "top_in_degree": [
+    [
+      "derelict-util",
+      70
+    ],
+    [
+      "vibe-d",
+      63
+    ],
+    [
+      "derelict-sdl2",
+      25
+    ],
+    [
+      "vibe-d:data",
+      25
+    ],
+    [
+      "derelict-gl3",
+      24
+    ],
+    [
+      "vibe-d:http",
+      18
+    ],
+    [
+      "pegged",
+      17
+    ],
+    [
+      "vibe-d:core",
+      16
+    ],
+    [
+      "openssl",
+      15
+    ],
+    [
+      "hunt",
+      15
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "arsd-official",
+      21
+    ],
+    [
+      "soupply",
+      18
+    ],
+    [
+      "selery",
+      17
+    ],
+    [
+      "dplug",
+      16
+    ],
+    [
+      "vibe-d",
+      13
+    ],
+    [
+      "armos",
+      13
+    ],
+    [
+      "tsv-utils-dlang",
+      12
+    ],
+    [
+      "aurorafw",
+      12
+    ],
+    [
+      "tsv-utils",
+      12
+    ],
+    [
+      "evael",
+      12
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "derelict-util",
+      0.06053618310364381
+    ],
+    [
+      "vibe-d",
+      0.029373868770554465
+    ],
+    [
+      "mir-core",
+      0.02298104706934668
+    ],
+    [
+      "stdx-allocator",
+      0.018379909051366116
+    ],
+    [
+      "vibe-d:data",
+      0.013661871275165919
+    ],
+    [
+      "taggedalgebraic",
+      0.010843209413634479
+    ],
+    [
+      "pegged",
+      0.009872518561335334
+    ],
+    [
+      "derelict-sdl2",
+      0.00848221385866386
+    ],
+    [
+      "tinyendian",
+      0.008187586836846393
+    ],
+    [
+      "openssl",
+      0.00778341271783342
+    ]
+  ],
+  "betweenness": [
+    [
+      "vibe-d",
+      0.001627892030848329
+    ],
+    [
+      "unit-threaded",
+      0.00012621644316911456
+    ],
+    [
+      "vibe-core",
+      0.00011333721427430696
+    ],
+    [
+      "fluent-asserts",
+      0.00010818552271638393
+    ],
+    [
+      "stdx-allocator",
+      9.511568123393316e-05
+    ],
+    [
+      "dlangui",
+      8.997429305912596e-05
+    ],
+    [
+      "libdparse",
+      4.808245454061507e-05
+    ],
+    [
+      "mir-lapack",
+      4.627249357326478e-05
+    ],
+    [
+      "soupply",
+      4.627249357326478e-05
+    ],
+    [
+      "mysql-native",
+      3.863768668442283e-05
+    ]
+  ],
+  "avg_clustering": 0.03263181343477135,
+  "communities": 112,
+  "modularity": 0.8531792152304949,
+  "diameter": 0,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 1,
+  "diameter_component_percent": 0.08613264427217916,
+  "elapsed_time": 1.3787016868591309
+}

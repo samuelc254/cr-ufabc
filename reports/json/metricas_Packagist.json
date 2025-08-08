@@ -1,0 +1,207 @@
+{
+  "name": "Packagist",
+  "nodes": 186519,
+  "edges": 705462,
+  "density": 2.027821843666028e-05,
+  "is_directed": true,
+  "scc_count": 184644,
+  "wcc_count": 1630,
+  "largest_scc_size": 445,
+  "largest_wcc_size": 181779,
+  "lcc_nodes": 181779,
+  "lcc_percent": 97.4587039390089,
+  "lcc_edges": 701493,
+  "lcc_edges_percent": 99.43738996572459,
+  "avg_degree": 7.5645054927380055,
+  "max_degree": 74275,
+  "degree_mean": 7.5645054927380055,
+  "degree_median": 3.0,
+  "degree_max": 74275,
+  "avg_in_degree": 3.7822527463690028,
+  "max_in_degree": 74250,
+  "in_degree_mean": 3.7822527463690028,
+  "in_degree_median": 0.0,
+  "in_degree_max": 74250,
+  "avg_out_degree": 3.7822527463690028,
+  "max_out_degree": 216,
+  "out_degree_mean": 3.7822527463690028,
+  "out_degree_median": 2.0,
+  "out_degree_max": 216,
+  "top_in_degree": [
+    [
+      "phpunit/phpunit",
+      74250
+    ],
+    [
+      "illuminate/support",
+      16311
+    ],
+    [
+      "squizlabs/php_codesniffer",
+      14092
+    ],
+    [
+      "guzzlehttp/guzzle",
+      13627
+    ],
+    [
+      "mockery/mockery",
+      13335
+    ],
+    [
+      "yiisoft/yii2",
+      8570
+    ],
+    [
+      "ext-json",
+      7503
+    ],
+    [
+      "laravel/framework",
+      7026
+    ],
+    [
+      "orchestra/testbench",
+      6534
+    ],
+    [
+      "symfony/console",
+      6219
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "spryker-shop/suite-b2b",
+      216
+    ],
+    [
+      "spryker-shop/b2b-demo-shop",
+      216
+    ],
+    [
+      "balsama/lightning_strict",
+      205
+    ],
+    [
+      "spryker-shop/suite",
+      181
+    ],
+    [
+      "spryker-shop/b2c-demo-shop",
+      181
+    ],
+    [
+      "drustack/framework-standard-edition",
+      180
+    ],
+    [
+      "gbodin/ec-light-test",
+      167
+    ],
+    [
+      "drupalcoders/quick_start",
+      156
+    ],
+    [
+      "openfed/openfed8",
+      138
+    ],
+    [
+      "oro/platform",
+      123
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "phpunit/phpunit",
+      0.10605559376177111
+    ],
+    [
+      "ext-json",
+      0.011911794998717794
+    ],
+    [
+      "symfony/phpunit-bridge",
+      0.01162338740185515
+    ],
+    [
+      "illuminate/support",
+      0.01106289885260127
+    ],
+    [
+      "squizlabs/php_codesniffer",
+      0.010239217343089923
+    ],
+    [
+      "ext-mbstring",
+      0.009301568151279638
+    ],
+    [
+      "guzzlehttp/guzzle",
+      0.00919598791622912
+    ],
+    [
+      "psr/container",
+      0.009025208742796118
+    ],
+    [
+      "yiisoft/yii2",
+      0.008464701189471137
+    ],
+    [
+      "symfony/console",
+      0.007204416799825617
+    ]
+  ],
+  "betweenness": [
+    [
+      "phpunit/phpunit",
+      0.001428676243623427
+    ],
+    [
+      "doctrine/instantiator",
+      0.001077563526871684
+    ],
+    [
+      "phpstan/phpstan-phpunit",
+      0.000994379140979738
+    ],
+    [
+      "phing/phing",
+      0.0009191789709397858
+    ],
+    [
+      "phpdocumentor/phpdocumentor",
+      0.0008736161562525767
+    ],
+    [
+      "jms/serializer",
+      0.00022855532826803187
+    ],
+    [
+      "vimeo/psalm",
+      0.00020488005228294252
+    ],
+    [
+      "ergebnis/composer-normalize",
+      0.00017678032291149322
+    ],
+    [
+      "laravel/framework",
+      0.00017117064858551635
+    ],
+    [
+      "myclabs/deep-copy",
+      0.00016891599223006895
+    ]
+  ],
+  "avg_clustering": 0.1421072512317169,
+  "communities": 1807,
+  "modularity": 0.5904680126301302,
+  "diameter": 14,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 445,
+  "diameter_component_percent": 0.2385815922238485,
+  "elapsed_time": 2171.2611627578735
+}

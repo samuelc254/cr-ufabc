@@ -1,0 +1,207 @@
+{
+  "name": "Hex",
+  "nodes": 5706,
+  "edges": 11201,
+  "density": 0.0003440878844877219,
+  "is_directed": true,
+  "scc_count": 5703,
+  "wcc_count": 119,
+  "largest_scc_size": 4,
+  "largest_wcc_size": 5403,
+  "lcc_nodes": 5403,
+  "lcc_percent": 94.68980021030494,
+  "lcc_edges": 11000,
+  "lcc_edges_percent": 98.20551736452103,
+  "avg_degree": 3.926042762004907,
+  "max_degree": 1048,
+  "degree_mean": 3.926042762004907,
+  "degree_median": 2.0,
+  "degree_max": 1048,
+  "avg_in_degree": 1.9630213810024535,
+  "max_in_degree": 1048,
+  "in_degree_mean": 1.9630213810024535,
+  "in_degree_median": 0.0,
+  "in_degree_max": 1048,
+  "avg_out_degree": 1.9630213810024535,
+  "max_out_degree": 24,
+  "out_degree_mean": 1.9630213810024535,
+  "out_degree_median": 2.0,
+  "out_degree_max": 24,
+  "top_in_degree": [
+    [
+      "poison",
+      1048
+    ],
+    [
+      "httpoison",
+      893
+    ],
+    [
+      "jason",
+      485
+    ],
+    [
+      "plug",
+      445
+    ],
+    [
+      "ecto",
+      351
+    ],
+    [
+      "timex",
+      192
+    ],
+    [
+      "hackney",
+      191
+    ],
+    [
+      "google_gax",
+      168
+    ],
+    [
+      "cowboy",
+      165
+    ],
+    [
+      "phoenix",
+      137
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "ejabberd",
+      24
+    ],
+    [
+      "fulib",
+      24
+    ],
+    [
+      "islands_engine",
+      21
+    ],
+    [
+      "rig",
+      16
+    ],
+    [
+      "materia",
+      16
+    ],
+    [
+      "riak_core_ng",
+      15
+    ],
+    [
+      "riak_core_ng_up",
+      15
+    ],
+    [
+      "sentinel",
+      14
+    ],
+    [
+      "ex_admin_runtime",
+      14
+    ],
+    [
+      "ami_models",
+      14
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "poison",
+      0.03819874591300018
+    ],
+    [
+      "hackney",
+      0.031532412954902146
+    ],
+    [
+      "decimal",
+      0.03011557866417009
+    ],
+    [
+      "httpoison",
+      0.02699962640022861
+    ],
+    [
+      "plug",
+      0.023848786810068637
+    ],
+    [
+      "jason",
+      0.0236410097985345
+    ],
+    [
+      "ecto",
+      0.013673089358574624
+    ],
+    [
+      "google_gax",
+      0.01185875973658384
+    ],
+    [
+      "telemetry",
+      0.010526642048678444
+    ],
+    [
+      "elixir_make",
+      0.008371681278144864
+    ]
+  ],
+  "betweenness": [
+    [
+      "hackney",
+      0.0003306795037955934
+    ],
+    [
+      "httpoison",
+      0.00020996111831142383
+    ],
+    [
+      "tesla",
+      0.00018848361414552863
+    ],
+    [
+      "google_gax",
+      0.00013997407887428255
+    ],
+    [
+      "timex",
+      7.480096278466951e-05
+    ],
+    [
+      "plug",
+      7.480096278466951e-05
+    ],
+    [
+      "idna",
+      5.5545269394556566e-05
+    ],
+    [
+      "tzdata",
+      5.313830772079245e-05
+    ],
+    [
+      "phoenix",
+      4.9003270999197676e-05
+    ],
+    [
+      "jason",
+      2.980929457507869e-05
+    ]
+  ],
+  "avg_clustering": 0.040452754329508914,
+  "communities": 151,
+  "modularity": 0.6516353568035983,
+  "diameter": 2,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 4,
+  "diameter_component_percent": 0.07010164738871363,
+  "elapsed_time": 7.112709283828735
+}

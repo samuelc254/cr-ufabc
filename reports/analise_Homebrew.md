@@ -1,31 +1,40 @@
-# Análise do Grafo: Homebrew
+# Análise Completa do Grafo: Homebrew
 
-## 1. Métricas Gerais
+## 1. Métricas Básicas
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 2,126 |
-| **Arestas (Dependências)** | 4,189 |
-| **Densidade do Grafo** | 0.00092723 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Nós** | 2,126 |
+| **Arestas** | 4,189 |
+| **Densidade** | 0.00092723 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 45 |
-| **Nós no Maior Componente (LCC)** | 2,023 (95.16%) |
-| **Arestas no Maior Componente (LCC)** | 4,130 (98.59%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 2,126 |
+| **Componentes Fracamente Conectados (WCC)** | 45 |
+| **Maior SCC** | 1 nós |
+| **Maior WCC** | 2,023 nós |
+| **Nós no Maior Componente** | 2,023 (95.16%) |
+| **Arestas no Maior Componente** | 4,130 (98.59%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 1.97 | 1.97 | 3.94 |
-| **Mediana** | 0.00 | 1.00 | 2.00 |
-| **Máximo** | 401 | 28 | 401 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 3.94 |
+| **Grau Máximo** | 401 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 1.97 |
+| **In-Degree Máximo** | 401 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 1.97 |
+| **Out-Degree Máximo** | 28 |
+| **Out-Degree Mediano** | 1.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `Pkg-config` | 401 |
 | 2 | `Python` | 211 |
 | 3 | `Autoconf` | 175 |
@@ -39,7 +48,7 @@
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `gstpluginsugly` | 28 |
 | 2 | `gstpluginsgood` | 25 |
 | 3 | `libav` | 22 |
@@ -56,7 +65,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `Python` | 0.039253 |
 | 2 | `Java` | 0.036753 |
 | 3 | `Pkg-config` | 0.030585 |
@@ -68,9 +77,9 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `Python3` | 0.009563 |
 | 10 | `Automake` | 0.009394 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
+|------|-----|-------------------|
 | 1 | `dockercloud` | 0.000000 |
 | 2 | `Python` | 0.000000 |
 | 3 | `aap` | 0.000000 |
@@ -84,11 +93,26 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.000000 |
 | **Comunidades Detectadas (Louvain)** | 61 |
 | **Modularidade** | 0.6236 |
 
----
-*Análise concluída em 2.25 segundos.*
+## 6. Análise de Diâmetro
+| Métrica | Valor |
+|---------|-------|
+| **Diâmetro** | 0 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 1 nós (0.0%) |
+| **Interpretação** | Rede Altamente Conectada |
 
+## 7. Resumo Executivo
+Este grafo possui **2,126 nós** e **4,189 arestas**.
+O diâmetro aproximado é **0**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 95.2% dos nós, 
+com densidade de 0.000927.
+
+---
+*Análise concluída em 1.93 segundos.*

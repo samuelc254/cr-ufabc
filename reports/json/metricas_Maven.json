@@ -1,0 +1,207 @@
+{
+  "name": "Maven",
+  "nodes": 122532,
+  "edges": 540840,
+  "density": 3.60224547086388e-05,
+  "is_directed": true,
+  "scc_count": 121912,
+  "wcc_count": 1561,
+  "largest_scc_size": 272,
+  "largest_wcc_size": 116772,
+  "lcc_nodes": 116772,
+  "lcc_percent": 95.29918715111154,
+  "lcc_edges": 535829,
+  "lcc_edges_percent": 99.07347829302566,
+  "avg_degree": 8.827734795808443,
+  "max_degree": 24161,
+  "degree_mean": 8.827734795808443,
+  "degree_median": 4.0,
+  "degree_max": 24161,
+  "avg_in_degree": 4.413867397904221,
+  "max_in_degree": 24159,
+  "in_degree_mean": 4.413867397904221,
+  "in_degree_median": 1.0,
+  "in_degree_max": 24159,
+  "avg_out_degree": 4.413867397904221,
+  "max_out_degree": 856,
+  "out_degree_mean": 4.413867397904221,
+  "out_degree_median": 3.0,
+  "out_degree_max": 856,
+  "top_in_degree": [
+    [
+      "junit:junit",
+      24159
+    ],
+    [
+      "org.scala-lang:scala-library",
+      21115
+    ],
+    [
+      "org.slf4j:slf4j-api",
+      9723
+    ],
+    [
+      "com.google.guava:guava",
+      4879
+    ],
+    [
+      "ch.qos.logback:logback-classic",
+      4763
+    ],
+    [
+      "commons-io:commons-io",
+      4365
+    ],
+    [
+      "org.mockito:mockito-core",
+      3908
+    ],
+    [
+      "log4j:log4j",
+      3533
+    ],
+    [
+      "org.mockito:mockito-all",
+      3352
+    ],
+    [
+      "org.apache.commons:commons-lang3",
+      3271
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "org.springframework.boot:spring-boot-dependencies",
+      856
+    ],
+    [
+      "org.apache.camel:camel-spring-boot-dependencies",
+      735
+    ],
+    [
+      "org.apache.camel:apache-camel",
+      219
+    ],
+    [
+      "com.moz.fiji.rest:fiji-rest-standard-plugin",
+      200
+    ],
+    [
+      "com.moz.fiji.spark:fiji-spark",
+      199
+    ],
+    [
+      "org.apache.camel:camel-bundle",
+      185
+    ],
+    [
+      "org.apereo.cas:cas-server-support-ws-sts",
+      172
+    ],
+    [
+      "org.apereo.cas:cas-server-support-pac4j-webflow",
+      169
+    ],
+    [
+      "org.apereo.cas:cas-server-support-oidc",
+      169
+    ],
+    [
+      "org.apereo.cas:cas-server-support-saml-idp-metadata-couchdb",
+      167
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "junit:junit",
+      0.05264993097537132
+    ],
+    [
+      "org.hamcrest:hamcrest-core",
+      0.04682169493322785
+    ],
+    [
+      "org.hamcrest:hamcrest",
+      0.03900419934278544
+    ],
+    [
+      "org.scala-lang:scala-library",
+      0.025786244342977514
+    ],
+    [
+      "com.typesafe:config",
+      0.024366554704544657
+    ],
+    [
+      "org.hamcrest:hamcrest-library",
+      0.024141200018114515
+    ],
+    [
+      "com.google.code.findbugs:jsr305",
+      0.014993814961185235
+    ],
+    [
+      "org.slf4j:slf4j-api",
+      0.00982689976616942
+    ],
+    [
+      "com.novocode:junit-interface",
+      0.007025350049709649
+    ],
+    [
+      "org.jacoco:org.jacoco.agent",
+      0.00593457670044925
+    ]
+  ],
+  "betweenness": [
+    [
+      "org.testng:testng",
+      0.0034917535995920143
+    ],
+    [
+      "org.springframework:spring-test",
+      0.002800787148420914
+    ],
+    [
+      "org.assertj:assertj-core",
+      0.0025785890218044186
+    ],
+    [
+      "com.github.marschall:memoryfilesystem",
+      0.0025529577614544796
+    ],
+    [
+      "org.springframework:spring-webflux",
+      0.00175533697848217
+    ],
+    [
+      "org.springframework:spring-context-support",
+      0.0010674519704179165
+    ],
+    [
+      "org.yaml:snakeyaml",
+      0.0010187560894544259
+    ],
+    [
+      "org.easymock:easymock",
+      0.000994517038680653
+    ],
+    [
+      "io.projectreactor.netty:reactor-netty",
+      0.0007974204244375163
+    ],
+    [
+      "io.micrometer:micrometer-core",
+      0.0007158899855722669
+    ]
+  ],
+  "avg_clustering": 0.10937900126582656,
+  "communities": 1807,
+  "modularity": 0.6091251121767349,
+  "diameter": 23,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 272,
+  "diameter_component_percent": 0.2219828289752881,
+  "elapsed_time": 616.6318352222443
+}

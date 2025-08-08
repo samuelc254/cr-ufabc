@@ -66,34 +66,43 @@ Um **gerenciador de pacotes** é uma ferramenta que automatiza a instalação, a
 
 ---
 
-# Análise do Grafo: Atom
+# Análise Completa do Grafo: Atom
 
-## 1. Métricas Gerais
+## 1. Métricas Básicas
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 7,243 |
-| **Arestas (Dependências)** | 17,128 |
-| **Densidade do Grafo** | 0.00032653 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Nós** | 7,243 |
+| **Arestas** | 17,128 |
+| **Densidade** | 0.00032653 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 222 |
-| **Nós no Maior Componente (LCC)** | 6,770 (93.47%) |
-| **Arestas no Maior Componente (LCC)** | 16,861 (98.44%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 7,243 |
+| **Componentes Fracamente Conectados (WCC)** | 222 |
+| **Maior SCC** | 1 nós |
+| **Maior WCC** | 6,770 nós |
+| **Nós no Maior Componente** | 6,770 (93.47%) |
+| **Arestas no Maior Componente** | 16,861 (98.44%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 2.36 | 2.36 | 4.73 |
-| **Mediana** | 0.00 | 1.00 | 2.00 |
-| **Máximo** | 840 | 162 | 840 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 4.73 |
+| **Grau Máximo** | 840 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 2.36 |
+| **In-Degree Máximo** | 840 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 2.36 |
+| **Out-Degree Máximo** | 162 |
+| **Out-Degree Mediano** | 1.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `atom-space-pen-views` | 840 |
 | 2 | `atom-package-deps` | 576 |
 | 3 | `eslint` | 478 |
@@ -107,7 +116,7 @@ Um **gerenciador de pacotes** é uma ferramenta que automatiza a instalação, a
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `nuclide` | 162 |
 | 2 | `mstest2` | 70 |
 | 3 | `mstest1` | 69 |
@@ -124,7 +133,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `atom-space-pen-views` | 0.028087 |
 | 2 | `atom-package-deps` | 0.017456 |
 | 3 | `coffeelint` | 0.013775 |
@@ -136,62 +145,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `request` | 0.006801 |
 | 10 | `lodash` | 0.006387 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `atom-languageclient` | 0.000039 |
-| 2 | `remote-ftp` | 0.000004 |
-| 3 | `autocomplete-plus` | 0.000004 |
-| 4 | `zestyio-api-wrapper` | 0.000001 |
-| 5 | `achievements` | 0.000000 |
-| 6 | `atom-space-pen-views` | 0.000000 |
-| 7 | `advanced-new-file` | 0.000000 |
-| 8 | `touch` | 0.000000 |
-| 9 | `mkdirp` | 0.000000 |
-| 10 | `adwaita-pro-ui` | 0.000000 |
+|------|-----|-------------------|
+| 1 | `atom-languageclient` | 0.000026 |
+| 2 | `autocomplete-plus` | 0.000004 |
+| 3 | `ionide-fsharp` | 0.000001 |
+| 4 | `language-c` | 0.000001 |
+| 5 | `jsfmt` | 0.000000 |
+| 6 | `achievements` | 0.000000 |
+| 7 | `atom-space-pen-views` | 0.000000 |
+| 8 | `advanced-new-file` | 0.000000 |
+| 9 | `touch` | 0.000000 |
+| 10 | `mkdirp` | 0.000000 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.001505 |
 | **Comunidades Detectadas (Louvain)** | 254 |
 | **Modularidade** | 0.6067 |
 
----
-*Análise concluída em 8.60 segundos.*
-
-
-
----
-
-# Análise do Grafo: CPAN
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 32,975 |
-| **Arestas (Dependências)** | 282,246 |
-| **Densidade do Grafo** | 0.00025958 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 0 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 1 nós (0.0%) |
+| **Interpretação** | Rede Altamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **7,243 nós** e **17,128 arestas**.
+O diâmetro aproximado é **0**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 93.5% dos nós, 
+com densidade de 0.000327.
+
+---
+*Análise concluída em 9.85 segundos.*
+
+---
+
+# Análise Completa do Grafo: CPAN
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 32,975 |
+| **Arestas** | 282,246 |
+| **Densidade** | 0.00025958 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 32 |
-| **Nós no Maior Componente (LCC)** | 32,898 (99.77%) |
-| **Arestas no Maior Componente (LCC)** | 282,194 (99.98%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 32,476 |
+| **Componentes Fracamente Conectados (WCC)** | 32 |
+| **Maior SCC** | 420 nós |
+| **Maior WCC** | 32,898 nós |
+| **Nós no Maior Componente** | 32,898 (99.77%) |
+| **Arestas no Maior Componente** | 282,194 (99.98%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 8.56 | 8.56 | 17.12 |
-| **Mediana** | 0.00 | 5.00 | 6.00 |
-| **Máximo** | 18,721 | 373 | 18,721 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 17.12 |
+| **Grau Máximo** | 18,721 |
+| **Grau Mediano** | 6.00 |
+| **In-Degree Médio** | 8.56 |
+| **In-Degree Máximo** | 18,721 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 8.56 |
+| **Out-Degree Máximo** | 373 |
+| **Out-Degree Mediano** | 5.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `Test-More` | 18,721 |
 | 2 | `ExtUtils-MakeMaker` | 17,110 |
 | 3 | `perl` | 12,314 |
@@ -205,7 +237,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `Task-POE-All` | 373 |
 | 2 | `Task-BeLike-MELO` | 310 |
 | 3 | `Task-MojoliciousPlugins-PerlAcademy` | 283 |
@@ -222,7 +254,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `ExtUtils-MakeMaker` | 0.080544 |
 | 2 | `Test-More` | 0.061821 |
 | 3 | `perl` | 0.041400 |
@@ -234,62 +266,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `Carp` | 0.011106 |
 | 10 | `Test-Pod` | 0.008273 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `Dist-Zilla` | 0.002596 |
-| 2 | `Module-Build` | 0.002488 |
-| 3 | `Moose` | 0.002439 |
-| 4 | `ExtUtils-Manifest` | 0.002301 |
-| 5 | `Try-Tiny` | 0.001492 |
-| 6 | `Dist-Zilla-Plugin-MetaProvides-Package` | 0.001152 |
-| 7 | `Dist-Zilla-PluginBundle-Author-ETHER` | 0.001088 |
-| 8 | `Test-Spelling` | 0.001007 |
-| 9 | `Dist-Zilla-PluginBundle-DAGOLDEN` | 0.000976 |
-| 10 | `Pod-Spell` | 0.000965 |
+|------|-----|-------------------|
+| 1 | `Dist-Zilla` | 0.002673 |
+| 2 | `Module-Build` | 0.002632 |
+| 3 | `ExtUtils-Manifest` | 0.002481 |
+| 4 | `Moose` | 0.002239 |
+| 5 | `Dist-Zilla-Plugin-MetaProvides-Package` | 0.001190 |
+| 6 | `Test-Spelling` | 0.001186 |
+| 7 | `Try-Tiny` | 0.001178 |
+| 8 | `Pod-Spell` | 0.001150 |
+| 9 | `Dist-Zilla-PluginBundle-Author-ETHER` | 0.001130 |
+| 10 | `Moo` | 0.001108 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.139627 |
 | **Comunidades Detectadas (Louvain)** | 65 |
 | **Modularidade** | 0.3815 |
 
----
-*Análise concluída em 247.85 segundos.*
-
-
-
----
-
-# Análise do Grafo: CRAN
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 15,413 |
-| **Arestas (Dependências)** | 102,241 |
-| **Densidade do Grafo** | 0.00043041 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 13 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 420 nós (1.3%) |
+| **Interpretação** | Rede Dispersa |
+
+## 7. Resumo Executivo
+Este grafo possui **32,975 nós** e **282,246 arestas**.
+O diâmetro aproximado é **13**, indicando que 
+a rede apresenta conectividade mais dispersa.
+
+O maior componente conectado contém 99.8% dos nós, 
+com densidade de 0.000260.
+
+---
+*Análise concluída em 207.82 segundos.*
+
+---
+
+# Análise Completa do Grafo: CRAN
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 15,413 |
+| **Arestas** | 102,241 |
+| **Densidade** | 0.00043041 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 3 |
-| **Nós no Maior Componente (LCC)** | 15,409 (99.97%) |
-| **Arestas no Maior Componente (LCC)** | 102,239 (100.00%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 14,386 |
+| **Componentes Fracamente Conectados (WCC)** | 3 |
+| **Maior SCC** | 882 nós |
+| **Maior WCC** | 15,409 nós |
+| **Nós no Maior Componente** | 15,409 (99.97%) |
+| **Arestas no Maior Componente** | 102,239 (100.00%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 6.63 | 6.63 | 13.27 |
-| **Mediana** | 0.00 | 5.00 | 6.00 |
-| **Máximo** | 9,587 | 107 | 9,587 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 13.27 |
+| **Grau Máximo** | 9,587 |
+| **Grau Mediano** | 6.00 |
+| **In-Degree Médio** | 6.63 |
+| **In-Degree Máximo** | 9,587 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 6.63 |
+| **Out-Degree Máximo** | 107 |
+| **Out-Degree Mediano** | 5.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `R` | 9,587 |
 | 2 | `knitr` | 4,239 |
 | 3 | `testthat` | 4,080 |
@@ -303,7 +358,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `mlr` | 107 |
 | 2 | `broom` | 81 |
 | 3 | `fitteR` | 76 |
@@ -320,7 +375,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `R` | 0.093825 |
 | 2 | `testthat` | 0.026385 |
 | 3 | `methods` | 0.025335 |
@@ -332,62 +387,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `MASS` | 0.011680 |
 | 10 | `Rcpp` | 0.011633 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `broom` | 0.019051 |
-| 2 | `dplyr` | 0.016171 |
-| 3 | `Hmisc` | 0.015483 |
-| 4 | `ggplot2` | 0.015317 |
-| 5 | `knitr` | 0.015122 |
-| 6 | `mice` | 0.010724 |
-| 7 | `caret` | 0.009188 |
-| 8 | `styler` | 0.007171 |
-| 9 | `earth` | 0.006567 |
-| 10 | `nlme` | 0.006489 |
+|------|-----|-------------------|
+| 1 | `broom` | 0.019273 |
+| 2 | `dplyr` | 0.017341 |
+| 3 | `knitr` | 0.015418 |
+| 4 | `Hmisc` | 0.015339 |
+| 5 | `ggplot2` | 0.014547 |
+| 6 | `mice` | 0.010068 |
+| 7 | `caret` | 0.008864 |
+| 8 | `testthat` | 0.007677 |
+| 9 | `styler` | 0.007480 |
+| 10 | `nlme` | 0.007129 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.176208 |
 | **Comunidades Detectadas (Louvain)** | 16 |
 | **Modularidade** | 0.3258 |
 
----
-*Análise concluída em 54.49 segundos.*
-
-
-
----
-
-# Análise do Grafo: Cargo
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 24,305 |
-| **Arestas (Dependências)** | 115,856 |
-| **Densidade do Grafo** | 0.00019613 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 17 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 882 nós (5.7%) |
+| **Interpretação** | Rede Dispersa |
+
+## 7. Resumo Executivo
+Este grafo possui **15,413 nós** e **102,241 arestas**.
+O diâmetro aproximado é **17**, indicando que 
+a rede apresenta conectividade mais dispersa.
+
+O maior componente conectado contém 100.0% dos nós, 
+com densidade de 0.000430.
+
+---
+*Análise concluída em 47.77 segundos.*
+
+---
+
+# Análise Completa do Grafo: Cargo
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 24,305 |
+| **Arestas** | 115,856 |
+| **Densidade** | 0.00019613 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 152 |
-| **Nós no Maior Componente (LCC)** | 23,951 (98.54%) |
-| **Arestas no Maior Componente (LCC)** | 115,628 (99.80%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 24,016 |
+| **Componentes Fracamente Conectados (WCC)** | 152 |
+| **Maior SCC** | 164 nós |
+| **Maior WCC** | 23,951 nós |
+| **Nós no Maior Componente** | 23,951 (98.54%) |
+| **Arestas no Maior Componente** | 115,628 (99.80%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 4.77 | 4.77 | 9.53 |
-| **Mediana** | 0.00 | 3.00 | 4.00 |
-| **Máximo** | 5,175 | 77 | 5,176 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 9.53 |
+| **Grau Máximo** | 5,176 |
+| **Grau Mediano** | 4.00 |
+| **In-Degree Médio** | 4.77 |
+| **In-Degree Máximo** | 5,175 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 4.77 |
+| **Out-Degree Máximo** | 77 |
+| **Out-Degree Mediano** | 3.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `serde` | 5,175 |
 | 2 | `serde_json` | 3,580 |
 | 3 | `log` | 3,193 |
@@ -401,7 +479,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `sccache` | 77 |
 | 2 | `sn0int` | 74 |
 | 3 | `solana` | 63 |
@@ -418,7 +496,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `serde_derive` | 0.036235 |
 | 2 | `serde` | 0.030830 |
 | 3 | `quote` | 0.030196 |
@@ -430,62 +508,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `winapi` | 0.011835 |
 | 10 | `serde_json` | 0.010846 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `syn` | 0.004509 |
-| 2 | `flate2` | 0.003202 |
-| 3 | `serde_derive` | 0.001940 |
-| 4 | `tokio` | 0.001667 |
-| 5 | `tokio-tcp` | 0.001574 |
-| 6 | `parking_lot` | 0.001524 |
-| 7 | `rand_core` | 0.001520 |
-| 8 | `clap` | 0.001397 |
-| 9 | `parking_lot_core` | 0.001369 |
-| 10 | `backtrace` | 0.001350 |
+|------|-----|-------------------|
+| 1 | `syn` | 0.004625 |
+| 2 | `flate2` | 0.003214 |
+| 3 | `serde_derive` | 0.002237 |
+| 4 | `tokio` | 0.001792 |
+| 5 | `parking_lot` | 0.001605 |
+| 6 | `tokio-tcp` | 0.001576 |
+| 7 | `parking_lot_core` | 0.001425 |
+| 8 | `rand_core` | 0.001408 |
+| 9 | `backtrace` | 0.001347 |
+| 10 | `tokio-reactor` | 0.001285 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.114293 |
 | **Comunidades Detectadas (Louvain)** | 183 |
 | **Modularidade** | 0.4845 |
 
----
-*Análise concluída em 54.33 segundos.*
-
-
-
----
-
-# Análise do Grafo: Conda
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 1,270 |
-| **Arestas (Dependências)** | 2,866 |
-| **Densidade do Grafo** | 0.00177832 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 18 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 164 nós (0.7%) |
+| **Interpretação** | Rede Dispersa |
+
+## 7. Resumo Executivo
+Este grafo possui **24,305 nós** e **115,856 arestas**.
+O diâmetro aproximado é **18**, indicando que 
+a rede apresenta conectividade mais dispersa.
+
+O maior componente conectado contém 98.5% dos nós, 
+com densidade de 0.000196.
+
+---
+*Análise concluída em 51.61 segundos.*
+
+---
+
+# Análise Completa do Grafo: Conda
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 1,270 |
+| **Arestas** | 2,866 |
+| **Densidade** | 0.00177832 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 63 |
-| **Nós no Maior Componente (LCC)** | 959 (75.51%) |
-| **Arestas no Maior Componente (LCC)** | 2,565 (89.50%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 1,270 |
+| **Componentes Fracamente Conectados (WCC)** | 63 |
+| **Maior SCC** | 1 nós |
+| **Maior WCC** | 959 nós |
+| **Nós no Maior Componente** | 959 (75.51%) |
+| **Arestas no Maior Componente** | 2,565 (89.50%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 2.26 | 2.26 | 4.51 |
-| **Mediana** | 1.00 | 1.00 | 2.00 |
-| **Máximo** | 536 | 275 | 546 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 4.51 |
+| **Grau Máximo** | 546 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 2.26 |
+| **In-Degree Máximo** | 536 |
+| **In-Degree Mediano** | 1.00 |
+| **Out-Degree Médio** | 2.26 |
+| **Out-Degree Máximo** | 275 |
+| **Out-Degree Mediano** | 1.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `python` | 536 |
 | 2 | `libgcc-ng` | 327 |
 | 3 | `libstdcxx-ng` | 144 |
@@ -499,7 +600,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `anaconda` | 275 |
 | 2 | `libgdal` | 31 |
 | 3 | `graphviz` | 21 |
@@ -516,7 +617,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `python` | 0.132325 |
 | 2 | `libgcc-ng` | 0.122561 |
 | 3 | `_libgcc_mutex` | 0.104456 |
@@ -528,62 +629,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `tk` | 0.012196 |
 | 10 | `readline` | 0.011881 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `python` | 0.007094 |
-| 2 | `libgcc-ng` | 0.000877 |
-| 3 | `sqlite` | 0.000656 |
-| 4 | `numpy` | 0.000527 |
-| 5 | `dask` | 0.000214 |
-| 6 | `tensorflow` | 0.000180 |
-| 7 | `notebook` | 0.000165 |
-| 8 | `tensorflow-base` | 0.000148 |
-| 9 | `libopencv` | 0.000132 |
-| 10 | `libgdal` | 0.000118 |
+|------|-----|-------------------|
+| 1 | `python` | 0.007259 |
+| 2 | `libgcc-ng` | 0.000867 |
+| 3 | `sqlite` | 0.000667 |
+| 4 | `numpy` | 0.000585 |
+| 5 | `libmxnet` | 0.000239 |
+| 6 | `libopencv` | 0.000213 |
+| 7 | `mxnet` | 0.000193 |
+| 8 | `bokeh` | 0.000186 |
+| 9 | `notebook` | 0.000160 |
+| 10 | `dask` | 0.000155 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.156843 |
 | **Comunidades Detectadas (Louvain)** | 74 |
 | **Modularidade** | 0.5542 |
 
----
-*Análise concluída em 1.28 segundos.*
-
-
-
----
-
-# Análise do Grafo: Dub
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 1,161 |
-| **Arestas (Dependências)** | 1,383 |
-| **Densidade do Grafo** | 0.00102691 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 0 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 1 nós (0.1%) |
+| **Interpretação** | Rede Altamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **1,270 nós** e **2,866 arestas**.
+O diâmetro aproximado é **0**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 75.5% dos nós, 
+com densidade de 0.001778.
+
+---
+*Análise concluída em 1.48 segundos.*
+
+---
+
+# Análise Completa do Grafo: Dub
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 1,161 |
+| **Arestas** | 1,383 |
+| **Densidade** | 0.00102691 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 93 |
-| **Nós no Maior Componente (LCC)** | 780 (67.18%) |
-| **Arestas no Maior Componente (LCC)** | 1,076 (77.80%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 1,161 |
+| **Componentes Fracamente Conectados (WCC)** | 93 |
+| **Maior SCC** | 1 nós |
+| **Maior WCC** | 780 nós |
+| **Nós no Maior Componente** | 780 (67.18%) |
+| **Arestas no Maior Componente** | 1,076 (77.80%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 1.19 | 1.19 | 2.38 |
-| **Mediana** | 1.00 | 1.00 | 1.00 |
-| **Máximo** | 70 | 21 | 76 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 2.38 |
+| **Grau Máximo** | 76 |
+| **Grau Mediano** | 1.00 |
+| **In-Degree Médio** | 1.19 |
+| **In-Degree Máximo** | 70 |
+| **In-Degree Mediano** | 1.00 |
+| **Out-Degree Médio** | 1.19 |
+| **Out-Degree Máximo** | 21 |
+| **Out-Degree Mediano** | 1.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `derelict-util` | 70 |
 | 2 | `vibe-d` | 63 |
 | 3 | `derelict-sdl2` | 25 |
@@ -597,7 +721,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `arsd-official` | 21 |
 | 2 | `soupply` | 18 |
 | 3 | `selery` | 17 |
@@ -614,7 +738,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `derelict-util` | 0.060536 |
 | 2 | `vibe-d` | 0.029374 |
 | 3 | `mir-core` | 0.022981 |
@@ -626,62 +750,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `tinyendian` | 0.008188 |
 | 10 | `openssl` | 0.007783 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `vibe-d` | 0.001625 |
-| 2 | `unit-threaded` | 0.000144 |
-| 3 | `stdx-allocator` | 0.000108 |
+|------|-----|-------------------|
+| 1 | `vibe-d` | 0.001628 |
+| 2 | `unit-threaded` | 0.000126 |
+| 3 | `vibe-core` | 0.000113 |
 | 4 | `fluent-asserts` | 0.000108 |
-| 5 | `vibe-core` | 0.000103 |
-| 6 | `libdparse` | 0.000074 |
-| 7 | `uim-html` | 0.000071 |
-| 8 | `dlangui` | 0.000059 |
-| 9 | `mysql-native` | 0.000052 |
-| 10 | `soupply` | 0.000046 |
+| 5 | `stdx-allocator` | 0.000095 |
+| 6 | `dlangui` | 0.000090 |
+| 7 | `libdparse` | 0.000048 |
+| 8 | `mir-lapack` | 0.000046 |
+| 9 | `soupply` | 0.000046 |
+| 10 | `mysql-native` | 0.000039 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.032632 |
 | **Comunidades Detectadas (Louvain)** | 112 |
 | **Modularidade** | 0.8532 |
 
+## 6. Análise de Diâmetro
+| Métrica | Valor |
+|---------|-------|
+| **Diâmetro** | 0 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 1 nós (0.1%) |
+| **Interpretação** | Rede Altamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **1,161 nós** e **1,383 arestas**.
+O diâmetro aproximado é **0**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 67.2% dos nós, 
+com densidade de 0.001027.
+
 ---
 *Análise concluída em 1.38 segundos.*
 
-
-
 ---
 
-# Análise do Grafo: Elm
+# Análise Completa do Grafo: Elm
 
-## 1. Métricas Gerais
+## 1. Métricas Básicas
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 1,474 |
-| **Arestas (Dependências)** | 3,781 |
-| **Densidade do Grafo** | 0.00174143 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Nós** | 1,474 |
+| **Arestas** | 3,781 |
+| **Densidade** | 0.00174143 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 1 |
-| **Nós no Maior Componente (LCC)** | 1,474 (100.00%) |
-| **Arestas no Maior Componente (LCC)** | 3,781 (100.00%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 1,474 |
+| **Componentes Fracamente Conectados (WCC)** | 1 |
+| **Maior SCC** | 1 nós |
+| **Maior WCC** | 1,474 nós |
+| **Nós no Maior Componente** | 1,474 (100.00%) |
+| **Arestas no Maior Componente** | 3,781 (100.00%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 2.57 | 2.57 | 5.13 |
-| **Mediana** | 0.00 | 2.00 | 3.00 |
-| **Máximo** | 1,467 | 16 | 1,467 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 5.13 |
+| **Grau Máximo** | 1,467 |
+| **Grau Mediano** | 3.00 |
+| **In-Degree Médio** | 2.57 |
+| **In-Degree Máximo** | 1,467 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 2.57 |
+| **Out-Degree Máximo** | 16 |
+| **Out-Degree Mediano** | 2.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `elm-lang/core` | 1,467 |
 | 2 | `elm-lang/html` | 628 |
 | 3 | `elm-lang/http` | 123 |
@@ -695,7 +842,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `cmditch/mel-bew3` | 16 |
 | 2 | `Gizra/elm-essentials` | 13 |
 | 3 | `williamwhitacre/scaffold` | 12 |
@@ -712,7 +859,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `elm-lang/core` | 0.339190 |
 | 2 | `elm-lang/html` | 0.063411 |
 | 3 | `elm-lang/virtual-dom` | 0.031589 |
@@ -724,62 +871,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `elm-community/elm-test` | 0.003423 |
 | 10 | `rtfeldman/elm-css` | 0.003258 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `elm-lang/html` | 0.000275 |
-| 2 | `elm-community/elm-test` | 0.000104 |
-| 3 | `rtfeldman/elm-css` | 0.000084 |
-| 4 | `elm-lang/svg` | 0.000028 |
-| 5 | `elm-lang/navigation` | 0.000020 |
-| 6 | `Bogdanp/elm-combine` | 0.000018 |
-| 7 | `elm-lang/mouse` | 0.000016 |
-| 8 | `gampleman/elm-visualization` | 0.000012 |
-| 9 | `folkertdev/one-true-path-experiment` | 0.000012 |
-| 10 | `rundis/elm-bootstrap` | 0.000012 |
+|------|-----|-------------------|
+| 1 | `elm-lang/html` | 0.000281 |
+| 2 | `elm-community/elm-test` | 0.000079 |
+| 3 | `rtfeldman/elm-css` | 0.000044 |
+| 4 | `elm-lang/svg` | 0.000032 |
+| 5 | `elm-community/elm-check` | 0.000023 |
+| 6 | `elm-lang/navigation` | 0.000018 |
+| 7 | `Gizra/elm-essentials` | 0.000016 |
+| 8 | `elm-tools/parser` | 0.000015 |
+| 9 | `drathier/elm-graph` | 0.000014 |
+| 10 | `RGBboy/websocket-server` | 0.000012 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.300517 |
 | **Comunidades Detectadas (Louvain)** | 12 |
 | **Modularidade** | 0.3852 |
 
----
-*Análise concluída em 1.99 segundos.*
-
-
-
----
-
-# Análise do Grafo: Geral
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 1,758,429 |
-| **Arestas (Dependências)** | 14,078,099 |
-| **Densidade do Grafo** | 0.00000455 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 0 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 1 nós (0.1%) |
+| **Interpretação** | Rede Altamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **1,474 nós** e **3,781 arestas**.
+O diâmetro aproximado é **0**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 100.0% dos nós, 
+com densidade de 0.001741.
+
+---
+*Análise concluída em 1.75 segundos.*
+
+---
+
+# Análise Completa do Grafo: Geral
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 1,758,429 |
+| **Arestas** | 14,078,099 |
+| **Densidade** | 0.00000455 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 11,301 |
-| **Nós no Maior Componente (LCC)** | 1,604,174 (91.23%) |
-| **Arestas no Maior Componente (LCC)** | 13,504,283 (95.92%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 1,730,853 |
+| **Componentes Fracamente Conectados (WCC)** | 11,301 |
+| **Maior SCC** | 18,413 nós |
+| **Maior WCC** | 1,604,174 nós |
+| **Nós no Maior Componente** | 1,604,174 (91.23%) |
+| **Arestas no Maior Componente** | 13,504,283 (95.92%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 8.01 | 8.01 | 16.01 |
-| **Mediana** | 0.00 | 4.00 | 5.00 |
-| **Máximo** | 192,961 | 1,000 | 193,045 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 16.01 |
+| **Grau Máximo** | 193,045 |
+| **Grau Mediano** | 5.00 |
+| **In-Degree Médio** | 8.01 |
+| **In-Degree Máximo** | 192,961 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 8.01 |
+| **Out-Degree Máximo** | 1,000 |
+| **Out-Degree Mediano** | 4.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `mocha` | 192,961 |
 | 2 | `eslint` | 177,661 |
 | 3 | `typescript` | 128,561 |
@@ -793,7 +963,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `sindresorhus.js` | 1,000 |
 | 2 | `npm-bomb` | 999 |
 | 3 | `1000-packages` | 999 |
@@ -810,67 +980,90 @@ _(Análise realizada em uma amostra de 200,000 nós do maior componente (Between
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
-| 1 | `mkdirp` | 0.019664 |
-| 2 | `mock-fs` | 0.019409 |
-| 3 | `eslint-plugin-import` | 0.016975 |
-| 4 | `jest` | 0.016138 |
-| 5 | `babel-core` | 0.014131 |
-| 6 | `rspec` | 0.013571 |
-| 7 | `webpack` | 0.012042 |
-| 8 | `sinon` | 0.011489 |
-| 9 | `istanbul` | 0.011411 |
-| 10 | `@babel/preset-env` | 0.011333 |
+|------|-----|----------------|
+| 1 | `typescript` | 0.035260 |
+| 2 | `rimraf` | 0.022145 |
+| 3 | `rake` | 0.019209 |
+| 4 | `should` | 0.013553 |
+| 5 | `husky` | 0.011594 |
+| 6 | `nyc` | 0.011314 |
+| 7 | `express` | 0.009337 |
+| 8 | `debug` | 0.008063 |
+| 9 | `karma` | 0.007316 |
+| 10 | `prop-types` | 0.006701 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `rollup` | 0.000049 |
-| 2 | `webpack` | 0.000046 |
-| 3 | `async` | 0.000043 |
-| 4 | `core-js` | 0.000027 |
-| 5 | `eslint-plugin-import` | 0.000026 |
-| 6 | `karma` | 0.000026 |
-| 7 | `@babel/preset-env` | 0.000025 |
-| 8 | `istanbul` | 0.000023 |
-| 9 | `airtap` | 0.000021 |
-| 10 | `redux` | 0.000019 |
+|------|-----|-------------------|
+| 1 | `typescript` | 0.000039 |
+| 2 | `node-fetch` | 0.000015 |
+| 3 | `karma` | 0.000014 |
+| 4 | `gulp-rename` | 0.000013 |
+| 5 | `husky` | 0.000012 |
+| 6 | `jscs` | 0.000012 |
+| 7 | `abort-controller` | 0.000012 |
+| 8 | `express` | 0.000010 |
+| 9 | `should` | 0.000008 |
+| 10 | `range-parser` | 0.000005 |
 
----
-*Análise concluída em 1554.93 segundos.*
-
-
-
----
-
-# Análise do Grafo: Haxelib
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 638 |
-| **Arestas (Dependências)** | 880 |
-| **Densidade do Grafo** | 0.00216532 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 30 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 18,413 nós (1.0%) |
+| **Interpretação** | Rede Dispersa |
+
+## 7. Resumo Executivo
+Este grafo possui **1,758,429 nós** e **14,078,099 arestas**.
+O diâmetro aproximado é **30**, indicando que 
+a rede apresenta conectividade mais dispersa.
+
+O maior componente conectado contém 91.2% dos nós, 
+com densidade de 0.000005.
+
+---
+*Análise concluída em 1541.54 segundos.*
+
+---
+
+# Análise Completa do Grafo: Haxelib
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 638 |
+| **Arestas** | 880 |
+| **Densidade** | 0.00216532 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 49 |
-| **Nós no Maior Componente (LCC)** | 500 (78.37%) |
-| **Arestas no Maior Componente (LCC)** | 751 (85.34%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 636 |
+| **Componentes Fracamente Conectados (WCC)** | 49 |
+| **Maior SCC** | 2 nós |
+| **Maior WCC** | 500 nós |
+| **Nós no Maior Componente** | 500 (78.37%) |
+| **Arestas no Maior Componente** | 751 (85.34%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 1.38 | 1.38 | 2.76 |
-| **Mediana** | 0.00 | 1.00 | 2.00 |
-| **Máximo** | 75 | 11 | 75 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 2.76 |
+| **Grau Máximo** | 75 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 1.38 |
+| **In-Degree Máximo** | 75 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 1.38 |
+| **Out-Degree Máximo** | 11 |
+| **Out-Degree Mediano** | 1.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `openfl` | 75 |
 | 2 | `tink_core` | 34 |
 | 3 | `hxnodejs` | 32 |
@@ -884,7 +1077,7 @@ _(Análise realizada em uma amostra de 200,000 nós do maior componente (Between
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `prime` | 11 |
 | 2 | `wighawag-game-utils` | 10 |
 | 3 | `prime-css` | 9 |
@@ -901,7 +1094,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `tink_core` | 0.058935 |
 | 2 | `openfl` | 0.053499 |
 | 3 | `tink_macro` | 0.028628 |
@@ -913,9 +1106,9 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `hxcpp` | 0.009180 |
 | 10 | `monax` | 0.008624 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
+|------|-----|-------------------|
 | 1 | `tink_http` | 0.000238 |
 | 2 | `hexinject` | 0.000213 |
 | 3 | `hexannotation` | 0.000193 |
@@ -929,46 +1122,69 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.068034 |
 | **Comunidades Detectadas (Louvain)** | 65 |
 | **Modularidade** | 0.8335 |
 
+## 6. Análise de Diâmetro
+| Métrica | Valor |
+|---------|-------|
+| **Diâmetro** | 1 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 2 nós (0.3%) |
+| **Interpretação** | Rede Altamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **638 nós** e **880 arestas**.
+O diâmetro aproximado é **1**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 78.4% dos nós, 
+com densidade de 0.002165.
+
 ---
 *Análise concluída em 0.61 segundos.*
 
-
-
 ---
 
-# Análise do Grafo: Hex
+# Análise Completa do Grafo: Hex
 
-## 1. Métricas Gerais
+## 1. Métricas Básicas
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 5,706 |
-| **Arestas (Dependências)** | 11,201 |
-| **Densidade do Grafo** | 0.00034409 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Nós** | 5,706 |
+| **Arestas** | 11,201 |
+| **Densidade** | 0.00034409 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 119 |
-| **Nós no Maior Componente (LCC)** | 5,403 (94.69%) |
-| **Arestas no Maior Componente (LCC)** | 11,000 (98.21%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 5,703 |
+| **Componentes Fracamente Conectados (WCC)** | 119 |
+| **Maior SCC** | 4 nós |
+| **Maior WCC** | 5,403 nós |
+| **Nós no Maior Componente** | 5,403 (94.69%) |
+| **Arestas no Maior Componente** | 11,000 (98.21%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 1.96 | 1.96 | 3.93 |
-| **Mediana** | 0.00 | 2.00 | 2.00 |
-| **Máximo** | 1,048 | 24 | 1,048 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 3.93 |
+| **Grau Máximo** | 1,048 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 1.96 |
+| **In-Degree Máximo** | 1,048 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 1.96 |
+| **Out-Degree Máximo** | 24 |
+| **Out-Degree Mediano** | 2.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `poison` | 1,048 |
 | 2 | `httpoison` | 893 |
 | 3 | `jason` | 485 |
@@ -982,7 +1198,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `ejabberd` | 24 |
 | 2 | `fulib` | 24 |
 | 3 | `islands_engine` | 21 |
@@ -999,7 +1215,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `poison` | 0.038199 |
 | 2 | `hackney` | 0.031532 |
 | 3 | `decimal` | 0.030116 |
@@ -1011,62 +1227,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `telemetry` | 0.010527 |
 | 10 | `elixir_make` | 0.008372 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `hackney` | 0.000339 |
-| 2 | `httpoison` | 0.000241 |
-| 3 | `tesla` | 0.000186 |
+|------|-----|-------------------|
+| 1 | `hackney` | 0.000331 |
+| 2 | `httpoison` | 0.000210 |
+| 3 | `tesla` | 0.000188 |
 | 4 | `google_gax` | 0.000140 |
-| 5 | `plug` | 0.000084 |
-| 6 | `phoenix` | 0.000067 |
-| 7 | `idna` | 0.000057 |
-| 8 | `jason` | 0.000034 |
-| 9 | `timex` | 0.000032 |
-| 10 | `cowboy` | 0.000030 |
+| 5 | `timex` | 0.000075 |
+| 6 | `plug` | 0.000075 |
+| 7 | `idna` | 0.000056 |
+| 8 | `tzdata` | 0.000053 |
+| 9 | `phoenix` | 0.000049 |
+| 10 | `jason` | 0.000030 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.040453 |
 | **Comunidades Detectadas (Louvain)** | 151 |
 | **Modularidade** | 0.6516 |
 
----
-*Análise concluída em 6.71 segundos.*
-
-
-
----
-
-# Análise do Grafo: Homebrew
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 2,126 |
-| **Arestas (Dependências)** | 4,189 |
-| **Densidade do Grafo** | 0.00092723 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 2 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 4 nós (0.1%) |
+| **Interpretação** | Rede Altamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **5,706 nós** e **11,201 arestas**.
+O diâmetro aproximado é **2**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 94.7% dos nós, 
+com densidade de 0.000344.
+
+---
+*Análise concluída em 7.11 segundos.*
+
+---
+
+# Análise Completa do Grafo: Homebrew
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 2,126 |
+| **Arestas** | 4,189 |
+| **Densidade** | 0.00092723 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 45 |
-| **Nós no Maior Componente (LCC)** | 2,023 (95.16%) |
-| **Arestas no Maior Componente (LCC)** | 4,130 (98.59%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 2,126 |
+| **Componentes Fracamente Conectados (WCC)** | 45 |
+| **Maior SCC** | 1 nós |
+| **Maior WCC** | 2,023 nós |
+| **Nós no Maior Componente** | 2,023 (95.16%) |
+| **Arestas no Maior Componente** | 4,130 (98.59%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 1.97 | 1.97 | 3.94 |
-| **Mediana** | 0.00 | 1.00 | 2.00 |
-| **Máximo** | 401 | 28 | 401 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 3.94 |
+| **Grau Máximo** | 401 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 1.97 |
+| **In-Degree Máximo** | 401 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 1.97 |
+| **Out-Degree Máximo** | 28 |
+| **Out-Degree Mediano** | 1.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `Pkg-config` | 401 |
 | 2 | `Python` | 211 |
 | 3 | `Autoconf` | 175 |
@@ -1080,7 +1319,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `gstpluginsugly` | 28 |
 | 2 | `gstpluginsgood` | 25 |
 | 3 | `libav` | 22 |
@@ -1097,7 +1336,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `Python` | 0.039253 |
 | 2 | `Java` | 0.036753 |
 | 3 | `Pkg-config` | 0.030585 |
@@ -1109,9 +1348,9 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `Python3` | 0.009563 |
 | 10 | `Automake` | 0.009394 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
+|------|-----|-------------------|
 | 1 | `dockercloud` | 0.000000 |
 | 2 | `Python` | 0.000000 |
 | 3 | `aap` | 0.000000 |
@@ -1125,46 +1364,69 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.000000 |
 | **Comunidades Detectadas (Louvain)** | 61 |
 | **Modularidade** | 0.6236 |
 
----
-*Análise concluída em 2.25 segundos.*
-
-
-
----
-
-# Análise do Grafo: Maven
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 122,532 |
-| **Arestas (Dependências)** | 540,840 |
-| **Densidade do Grafo** | 0.00003602 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 0 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 1 nós (0.0%) |
+| **Interpretação** | Rede Altamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **2,126 nós** e **4,189 arestas**.
+O diâmetro aproximado é **0**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 95.2% dos nós, 
+com densidade de 0.000927.
+
+---
+*Análise concluída em 1.93 segundos.*
+
+---
+
+# Análise Completa do Grafo: Maven
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 122,532 |
+| **Arestas** | 540,840 |
+| **Densidade** | 0.00003602 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 1,561 |
-| **Nós no Maior Componente (LCC)** | 116,772 (95.30%) |
-| **Arestas no Maior Componente (LCC)** | 535,829 (99.07%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 121,912 |
+| **Componentes Fracamente Conectados (WCC)** | 1,561 |
+| **Maior SCC** | 272 nós |
+| **Maior WCC** | 116,772 nós |
+| **Nós no Maior Componente** | 116,772 (95.30%) |
+| **Arestas no Maior Componente** | 535,829 (99.07%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 4.41 | 4.41 | 8.83 |
-| **Mediana** | 1.00 | 3.00 | 4.00 |
-| **Máximo** | 24,159 | 856 | 24,161 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 8.83 |
+| **Grau Máximo** | 24,161 |
+| **Grau Mediano** | 4.00 |
+| **In-Degree Médio** | 4.41 |
+| **In-Degree Máximo** | 24,159 |
+| **In-Degree Mediano** | 1.00 |
+| **Out-Degree Médio** | 4.41 |
+| **Out-Degree Máximo** | 856 |
+| **Out-Degree Mediano** | 3.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `junit:junit` | 24,159 |
 | 2 | `org.scala-lang:scala-library` | 21,115 |
 | 3 | `org.slf4j:slf4j-api` | 9,723 |
@@ -1178,7 +1440,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `org.springframework.boot:spring-boot-dependencies` | 856 |
 | 2 | `org.apache.camel:camel-spring-boot-dependencies` | 735 |
 | 3 | `org.apache.camel:apache-camel` | 219 |
@@ -1195,7 +1457,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `junit:junit` | 0.052650 |
 | 2 | `org.hamcrest:hamcrest-core` | 0.046822 |
 | 3 | `org.hamcrest:hamcrest` | 0.039004 |
@@ -1207,62 +1469,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `com.novocode:junit-interface` | 0.007025 |
 | 10 | `org.jacoco:org.jacoco.agent` | 0.005935 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `org.testng:testng` | 0.003586 |
-| 2 | `org.springframework:spring-test` | 0.002837 |
-| 3 | `org.assertj:assertj-core` | 0.002766 |
-| 4 | `com.github.marschall:memoryfilesystem` | 0.002715 |
-| 5 | `org.springframework:spring-webflux` | 0.001766 |
-| 6 | `org.springframework:spring-context-support` | 0.001110 |
-| 7 | `org.yaml:snakeyaml` | 0.001069 |
-| 8 | `org.easymock:easymock` | 0.001046 |
-| 9 | `io.projectreactor.netty:reactor-netty` | 0.000830 |
-| 10 | `org.scalatest:scalatest_2.12` | 0.000778 |
+|------|-----|-------------------|
+| 1 | `org.testng:testng` | 0.003492 |
+| 2 | `org.springframework:spring-test` | 0.002801 |
+| 3 | `org.assertj:assertj-core` | 0.002579 |
+| 4 | `com.github.marschall:memoryfilesystem` | 0.002553 |
+| 5 | `org.springframework:spring-webflux` | 0.001755 |
+| 6 | `org.springframework:spring-context-support` | 0.001067 |
+| 7 | `org.yaml:snakeyaml` | 0.001019 |
+| 8 | `org.easymock:easymock` | 0.000995 |
+| 9 | `io.projectreactor.netty:reactor-netty` | 0.000797 |
+| 10 | `io.micrometer:micrometer-core` | 0.000716 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.109379 |
 | **Comunidades Detectadas (Louvain)** | 1,807 |
 | **Modularidade** | 0.6091 |
 
----
-*Análise concluída em 624.92 segundos.*
-
-
-
----
-
-# Análise do Grafo: NPM
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 1,036,048 |
-| **Arestas (Dependências)** | 11,134,428 |
-| **Densidade do Grafo** | 0.00001037 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 23 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 272 nós (0.2%) |
+| **Interpretação** | Rede Dispersa |
+
+## 7. Resumo Executivo
+Este grafo possui **122,532 nós** e **540,840 arestas**.
+O diâmetro aproximado é **23**, indicando que 
+a rede apresenta conectividade mais dispersa.
+
+O maior componente conectado contém 95.3% dos nós, 
+com densidade de 0.000036.
+
+---
+*Análise concluída em 616.63 segundos.*
+
+---
+
+# Análise Completa do Grafo: NPM
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 1,036,048 |
+| **Arestas** | 11,134,428 |
+| **Densidade** | 0.00001037 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 4,316 |
-| **Nós no Maior Componente (LCC)** | 1,022,526 (98.69%) |
-| **Arestas no Maior Componente (LCC)** | 11,119,666 (99.87%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 1,016,856 |
+| **Componentes Fracamente Conectados (WCC)** | 4,316 |
+| **Maior SCC** | 13,026 nós |
+| **Maior WCC** | 1,022,526 nós |
+| **Nós no Maior Componente** | 1,022,526 (98.69%) |
+| **Arestas no Maior Componente** | 11,119,666 (99.87%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 10.75 | 10.75 | 21.49 |
-| **Mediana** | 0.00 | 6.00 | 7.00 |
-| **Máximo** | 189,564 | 1,000 | 189,648 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 21.49 |
+| **Grau Máximo** | 189,648 |
+| **Grau Mediano** | 7.00 |
+| **In-Degree Médio** | 10.75 |
+| **In-Degree Máximo** | 189,564 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 10.75 |
+| **Out-Degree Máximo** | 1,000 |
+| **Out-Degree Mediano** | 6.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `mocha` | 189,564 |
 | 2 | `eslint` | 177,187 |
 | 3 | `typescript` | 128,457 |
@@ -1276,7 +1561,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `sindresorhus.js` | 1,000 |
 | 2 | `npm-bomb` | 999 |
 | 3 | `1000-packages` | 999 |
@@ -1293,7 +1578,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `mocha` | 0.021679 |
 | 2 | `eslint` | 0.014611 |
 | 3 | `chai` | 0.007349 |
@@ -1305,62 +1590,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `tap` | 0.006303 |
 | 10 | `rimraf` | 0.005755 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `mocha` | 0.003020 |
-| 2 | `eslint` | 0.002245 |
-| 3 | `typescript` | 0.001438 |
-| 4 | `webpack` | 0.000729 |
-| 5 | `electron` | 0.000685 |
-| 6 | `@electron/get` | 0.000684 |
-| 7 | `global-agent` | 0.000676 |
-| 8 | `airtap` | 0.000657 |
-| 9 | `antd` | 0.000655 |
-| 10 | `anyproxy` | 0.000652 |
+|------|-----|-------------------|
+| 1 | `mocha` | 0.002967 |
+| 2 | `eslint` | 0.002387 |
+| 3 | `typescript` | 0.001337 |
+| 4 | `webpack` | 0.000848 |
+| 5 | `electron` | 0.000688 |
+| 6 | `@electron/get` | 0.000687 |
+| 7 | `global-agent` | 0.000681 |
+| 8 | `airtap` | 0.000666 |
+| 9 | `anyproxy` | 0.000658 |
+| 10 | `antd` | 0.000658 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.123555 |
 | **Comunidades Detectadas (Louvain)** | 5,428 |
 | **Modularidade** | 0.4848 |
 
----
-*Análise concluída em 93969.64 segundos.*
-
-
-
----
-
-# Análise do Grafo: NuGet
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 150,103 |
-| **Arestas (Dependências)** | 412,687 |
-| **Densidade do Grafo** | 0.00001832 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 25 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 13,026 nós (1.3%) |
+| **Interpretação** | Rede Dispersa |
+
+## 7. Resumo Executivo
+Este grafo possui **1,036,048 nós** e **11,134,428 arestas**.
+O diâmetro aproximado é **25**, indicando que 
+a rede apresenta conectividade mais dispersa.
+
+O maior componente conectado contém 98.7% dos nós, 
+com densidade de 0.000010.
+
+---
+*Análise concluída em 71351.25 segundos.*
+
+---
+
+# Análise Completa do Grafo: NuGet
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 150,103 |
+| **Arestas** | 412,687 |
+| **Densidade** | 0.00001832 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 2,957 |
-| **Nós no Maior Componente (LCC)** | 139,801 (93.14%) |
-| **Arestas no Maior Componente (LCC)** | 402,791 (97.60%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 150,051 |
+| **Componentes Fracamente Conectados (WCC)** | 2,957 |
+| **Maior SCC** | 7 nós |
+| **Maior WCC** | 139,801 nós |
+| **Nós no Maior Componente** | 139,801 (93.14%) |
+| **Arestas no Maior Componente** | 402,791 (97.60%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 2.75 | 2.75 | 5.50 |
-| **Mediana** | 0.00 | 2.00 | 2.00 |
-| **Máximo** | 24,990 | 179 | 24,996 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 5.50 |
+| **Grau Máximo** | 24,996 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 2.75 |
+| **In-Degree Máximo** | 24,990 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 2.75 |
+| **Out-Degree Máximo** | 179 |
+| **Out-Degree Mediano** | 2.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `Newtonsoft.Json` | 24,990 |
 | 2 | `NETStandard.Library` | 12,827 |
 | 3 | `EntityFramework` | 4,983 |
@@ -1374,7 +1682,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `Dynamicweb.Admin` | 179 |
 | 2 | `Bupa.Api.Common.AspNetCore` | 176 |
 | 3 | `SDK.All` | 168 |
@@ -1391,7 +1699,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `Microsoft.NETCore.Targets` | 0.087696 |
 | 2 | `Microsoft.NETCore.Platforms` | 0.061927 |
 | 3 | `System.Runtime` | 0.048275 |
@@ -1403,62 +1711,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `System.Resources.ResourceManager` | 0.010641 |
 | 10 | `System.Reflection` | 0.008155 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `NETStandard.Library` | 0.000298 |
-| 2 | `Newtonsoft.Json` | 0.000104 |
-| 3 | `runtime.native.System.Security.Cryptography.OpenSsl` | 0.000079 |
-| 4 | `EntityFramework` | 0.000077 |
-| 5 | `System.Net.Http` | 0.000054 |
-| 6 | `EntityFramework.Commands` | 0.000046 |
-| 7 | `Microsoft.NETCore.UniversalWindowsPlatform` | 0.000036 |
-| 8 | `System.Security.Cryptography.X509Certificates` | 0.000034 |
-| 9 | `Microsoft.AspNet.Mvc` | 0.000033 |
-| 10 | `System.Security.Cryptography.Algorithms` | 0.000031 |
+|------|-----|-------------------|
+| 1 | `NETStandard.Library` | 0.000307 |
+| 2 | `Newtonsoft.Json` | 0.000126 |
+| 3 | `EntityFramework` | 0.000080 |
+| 4 | `runtime.native.System.Security.Cryptography.OpenSsl` | 0.000079 |
+| 5 | `System.Net.Http` | 0.000055 |
+| 6 | `EntityFramework.Commands` | 0.000049 |
+| 7 | `System.Security.Cryptography.X509Certificates` | 0.000034 |
+| 8 | `System.Security.Cryptography.Algorithms` | 0.000031 |
+| 9 | `Microsoft.AspNet.Mvc` | 0.000028 |
+| 10 | `Microsoft.AspNet.Hosting` | 0.000024 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.086237 |
 | **Comunidades Detectadas (Louvain)** | 3,185 |
 | **Modularidade** | 0.6806 |
 
----
-*Análise concluída em 508.99 segundos.*
-
-
-
----
-
-# Análise do Grafo: Packagist
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 186,519 |
-| **Arestas (Dependências)** | 705,462 |
-| **Densidade do Grafo** | 0.00002028 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 5 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 7 nós (0.0%) |
+| **Interpretação** | Rede Altamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **150,103 nós** e **412,687 arestas**.
+O diâmetro aproximado é **5**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 93.1% dos nós, 
+com densidade de 0.000018.
+
+---
+*Análise concluída em 444.05 segundos.*
+
+---
+
+# Análise Completa do Grafo: Packagist
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 186,519 |
+| **Arestas** | 705,462 |
+| **Densidade** | 0.00002028 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 1,630 |
-| **Nós no Maior Componente (LCC)** | 181,779 (97.46%) |
-| **Arestas no Maior Componente (LCC)** | 701,493 (99.44%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 184,644 |
+| **Componentes Fracamente Conectados (WCC)** | 1,630 |
+| **Maior SCC** | 445 nós |
+| **Maior WCC** | 181,779 nós |
+| **Nós no Maior Componente** | 181,779 (97.46%) |
+| **Arestas no Maior Componente** | 701,493 (99.44%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 3.78 | 3.78 | 7.56 |
-| **Mediana** | 0.00 | 2.00 | 3.00 |
-| **Máximo** | 74,250 | 216 | 74,275 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 7.56 |
+| **Grau Máximo** | 74,275 |
+| **Grau Mediano** | 3.00 |
+| **In-Degree Médio** | 3.78 |
+| **In-Degree Máximo** | 74,250 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 3.78 |
+| **Out-Degree Máximo** | 216 |
+| **Out-Degree Mediano** | 2.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `phpunit/phpunit` | 74,250 |
 | 2 | `illuminate/support` | 16,311 |
 | 3 | `squizlabs/php_codesniffer` | 14,092 |
@@ -1472,7 +1803,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `spryker-shop/suite-b2b` | 216 |
 | 2 | `spryker-shop/b2b-demo-shop` | 216 |
 | 3 | `balsama/lightning_strict` | 205 |
@@ -1489,7 +1820,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `phpunit/phpunit` | 0.106056 |
 | 2 | `ext-json` | 0.011912 |
 | 3 | `symfony/phpunit-bridge` | 0.011623 |
@@ -1501,62 +1832,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `yiisoft/yii2` | 0.008465 |
 | 10 | `symfony/console` | 0.007204 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `phpunit/phpunit` | 0.001422 |
-| 2 | `doctrine/instantiator` | 0.001081 |
-| 3 | `phpstan/phpstan-phpunit` | 0.001007 |
-| 4 | `phing/phing` | 0.000953 |
-| 5 | `phpdocumentor/phpdocumentor` | 0.000923 |
-| 6 | `jms/serializer` | 0.000234 |
-| 7 | `vimeo/psalm` | 0.000219 |
-| 8 | `ergebnis/composer-normalize` | 0.000183 |
-| 9 | `laravel/framework` | 0.000174 |
+|------|-----|-------------------|
+| 1 | `phpunit/phpunit` | 0.001429 |
+| 2 | `doctrine/instantiator` | 0.001078 |
+| 3 | `phpstan/phpstan-phpunit` | 0.000994 |
+| 4 | `phing/phing` | 0.000919 |
+| 5 | `phpdocumentor/phpdocumentor` | 0.000874 |
+| 6 | `jms/serializer` | 0.000229 |
+| 7 | `vimeo/psalm` | 0.000205 |
+| 8 | `ergebnis/composer-normalize` | 0.000177 |
+| 9 | `laravel/framework` | 0.000171 |
 | 10 | `myclabs/deep-copy` | 0.000169 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.142107 |
 | **Comunidades Detectadas (Louvain)** | 1,807 |
 | **Modularidade** | 0.5905 |
 
----
-*Análise concluída em 2268.50 segundos.*
-
-
-
----
-
-# Análise do Grafo: Pub
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 8,667 |
-| **Arestas (Dependências)** | 28,851 |
-| **Densidade do Grafo** | 0.00038413 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 14 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 445 nós (0.2%) |
+| **Interpretação** | Rede Dispersa |
+
+## 7. Resumo Executivo
+Este grafo possui **186,519 nós** e **705,462 arestas**.
+O diâmetro aproximado é **14**, indicando que 
+a rede apresenta conectividade mais dispersa.
+
+O maior componente conectado contém 97.5% dos nós, 
+com densidade de 0.000020.
+
+---
+*Análise concluída em 2171.26 segundos.*
+
+---
+
+# Análise Completa do Grafo: Pub
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 8,667 |
+| **Arestas** | 28,851 |
+| **Densidade** | 0.00038413 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 16 |
-| **Nós no Maior Componente (LCC)** | 8,626 (99.53%) |
-| **Arestas no Maior Componente (LCC)** | 28,821 (99.90%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 8,557 |
+| **Componentes Fracamente Conectados (WCC)** | 16 |
+| **Maior SCC** | 62 nós |
+| **Maior WCC** | 8,626 nós |
+| **Nós no Maior Componente** | 8,626 (99.53%) |
+| **Arestas no Maior Componente** | 28,821 (99.90%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 3.33 | 3.33 | 6.66 |
-| **Mediana** | 0.00 | 2.00 | 3.00 |
-| **Máximo** | 4,655 | 64 | 4,663 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 6.66 |
+| **Grau Máximo** | 4,663 |
+| **Grau Mediano** | 3.00 |
+| **In-Degree Médio** | 3.33 |
+| **In-Degree Máximo** | 4,655 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 3.33 |
+| **Out-Degree Máximo** | 64 |
+| **Out-Degree Mediano** | 2.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `flutter` | 4,655 |
 | 2 | `flutter_test` | 3,723 |
 | 3 | `test` | 2,299 |
@@ -1570,7 +1924,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `magpiecli` | 64 |
 | 2 | `mpcli` | 64 |
 | 3 | `mgpcli` | 64 |
@@ -1587,7 +1941,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `flutter` | 0.088888 |
 | 2 | `test` | 0.061618 |
 | 3 | `flutter_test` | 0.058742 |
@@ -1599,62 +1953,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `vector_math` | 0.010330 |
 | 10 | `sky_tools` | 0.009566 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `flutter` | 0.006916 |
-| 2 | `sky_tools` | 0.004838 |
-| 3 | `test` | 0.004219 |
-| 4 | `build_runner` | 0.002647 |
-| 5 | `mockito` | 0.001959 |
-| 6 | `vector_math` | 0.001446 |
-| 7 | `test_core` | 0.001343 |
-| 8 | `shelf_route` | 0.001017 |
-| 9 | `vm_service` | 0.000920 |
-| 10 | `build_web_compilers` | 0.000920 |
+|------|-----|-------------------|
+| 1 | `flutter` | 0.006877 |
+| 2 | `sky_tools` | 0.004814 |
+| 3 | `test` | 0.004182 |
+| 4 | `build_runner` | 0.002644 |
+| 5 | `mockito` | 0.001896 |
+| 6 | `vector_math` | 0.001405 |
+| 7 | `test_core` | 0.001321 |
+| 8 | `shelf_route` | 0.001020 |
+| 9 | `build_web_compilers` | 0.000911 |
+| 10 | `vm_service` | 0.000902 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.110313 |
 | **Comunidades Detectadas (Louvain)** | 31 |
 | **Modularidade** | 0.4839 |
 
----
-*Análise concluída em 17.00 segundos.*
-
-
-
----
-
-# Análise do Grafo: Puppet
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 4,716 |
-| **Arestas (Dependências)** | 9,623 |
-| **Densidade do Grafo** | 0.00043277 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 8 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 62 nós (0.7%) |
+| **Interpretação** | Rede Moderadamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **8,667 nós** e **28,851 arestas**.
+O diâmetro aproximado é **8**, indicando que 
+a rede apresenta conectividade moderada.
+
+O maior componente conectado contém 99.5% dos nós, 
+com densidade de 0.000384.
+
+---
+*Análise concluída em 15.20 segundos.*
+
+---
+
+# Análise Completa do Grafo: Puppet
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 4,716 |
+| **Arestas** | 9,623 |
+| **Densidade** | 0.00043277 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 54 |
-| **Nós no Maior Componente (LCC)** | 4,566 (96.82%) |
-| **Arestas no Maior Componente (LCC)** | 9,520 (98.93%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 4,712 |
+| **Componentes Fracamente Conectados (WCC)** | 54 |
+| **Maior SCC** | 2 nós |
+| **Maior WCC** | 4,566 nós |
+| **Nós no Maior Componente** | 4,566 (96.82%) |
+| **Arestas no Maior Componente** | 9,520 (98.93%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 2.04 | 2.04 | 4.08 |
-| **Mediana** | 0.00 | 1.00 | 2.00 |
-| **Máximo** | 3,422 | 75 | 3,422 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 4.08 |
+| **Grau Máximo** | 3,422 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 2.04 |
+| **In-Degree Máximo** | 3,422 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 2.04 |
+| **Out-Degree Máximo** | 75 |
+| **Out-Degree Mediano** | 1.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `puppetlabs-stdlib` | 3,422 |
 | 2 | `puppetlabs-concat` | 554 |
 | 3 | `puppetlabs-apt` | 415 |
@@ -1668,7 +2045,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `simp-simp_core` | 75 |
 | 2 | `simp-simp` | 43 |
 | 3 | `geoffwilliams-r_profile` | 42 |
@@ -1685,7 +2062,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `puppetlabs-stdlib` | 0.275443 |
 | 2 | `puppetlabs-translate` | 0.027495 |
 | 3 | `puppetlabs-concat` | 0.024679 |
@@ -1697,62 +2074,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `puppetlabs-apache` | 0.005320 |
 | 10 | `stahnma-epel` | 0.005225 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `puppetlabs-concat` | 0.000037 |
-| 2 | `puppetlabs-apt` | 0.000022 |
-| 3 | `puppetlabs-apache` | 0.000013 |
-| 4 | `tarun4-chocolatey` | 0.000012 |
+|------|-----|-------------------|
+| 1 | `puppetlabs-concat` | 0.000036 |
+| 2 | `geoffwilliams-r_profile` | 0.000026 |
+| 3 | `puppetlabs-apt` | 0.000021 |
+| 4 | `puppetlabs-apache` | 0.000014 |
 | 5 | `puppetlabs-inifile` | 0.000012 |
-| 6 | `camptocamp-systemd` | 0.000008 |
-| 7 | `puppetlabs-postgresql` | 0.000008 |
-| 8 | `puppetlabs-powershell` | 0.000007 |
-| 9 | `simp-simplib` | 0.000006 |
-| 10 | `simp-nfs` | 0.000005 |
+| 6 | `camptocamp-systemd` | 0.000012 |
+| 7 | `simp-rsync` | 0.000010 |
+| 8 | `puppetlabs-powershell` | 0.000010 |
+| 9 | `puppetlabs-mysql` | 0.000008 |
+| 10 | `tarun4-chocolatey` | 0.000007 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.140082 |
 | **Comunidades Detectadas (Louvain)** | 94 |
 | **Modularidade** | 0.5360 |
 
----
-*Análise concluída em 5.86 segundos.*
-
-
-
----
-
-# Análise do Grafo: Pypi
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 46,668 |
-| **Arestas (Dependências)** | 126,759 |
-| **Densidade do Grafo** | 0.00005820 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 1 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 2 nós (0.0%) |
+| **Interpretação** | Rede Altamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **4,716 nós** e **9,623 arestas**.
+O diâmetro aproximado é **1**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 96.8% dos nós, 
+com densidade de 0.000433.
+
+---
+*Análise concluída em 5.46 segundos.*
+
+---
+
+# Análise Completa do Grafo: Pypi
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 46,668 |
+| **Arestas** | 126,759 |
+| **Densidade** | 0.00005820 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 577 |
-| **Nós no Maior Componente (LCC)** | 45,180 (96.81%) |
-| **Arestas no Maior Componente (LCC)** | 125,754 (99.21%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 46,642 |
+| **Componentes Fracamente Conectados (WCC)** | 577 |
+| **Maior SCC** | 4 nós |
+| **Maior WCC** | 45,180 nós |
+| **Nós no Maior Componente** | 45,180 (96.81%) |
+| **Arestas no Maior Componente** | 125,754 (99.21%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 2.72 | 2.72 | 5.43 |
-| **Mediana** | 0.00 | 2.00 | 2.00 |
-| **Máximo** | 9,459 | 120 | 9,459 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 5.43 |
+| **Grau Máximo** | 9,459 |
+| **Grau Mediano** | 2.00 |
+| **In-Degree Médio** | 2.72 |
+| **In-Degree Máximo** | 9,459 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 2.72 |
+| **Out-Degree Máximo** | 120 |
+| **Out-Degree Mediano** | 2.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `requests` | 9,459 |
 | 2 | `six` | 4,128 |
 | 3 | `numpy` | 3,540 |
@@ -1766,7 +2166,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `cloudscript` | 120 |
 | 2 | `c7n-azure` | 105 |
 | 3 | `TEStribute` | 102 |
@@ -1783,7 +2183,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `requests` | 0.044330 |
 | 2 | `six` | 0.027790 |
 | 3 | `numpy` | 0.017058 |
@@ -1795,62 +2195,85 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `Django` | 0.004968 |
 | 10 | `pytz` | 0.004755 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `pytest` | 0.000004 |
-| 2 | `boto3` | 0.000002 |
-| 3 | `botocore` | 0.000002 |
-| 4 | `ipython` | 0.000002 |
-| 5 | `indy-node` | 0.000002 |
-| 6 | `oslo.messaging` | 0.000002 |
-| 7 | `importlib-metadata` | 0.000002 |
-| 8 | `azureml-core` | 0.000002 |
-| 9 | `Django` | 0.000001 |
-| 10 | `indy-plenum` | 0.000001 |
+|------|-----|-------------------|
+| 1 | `pytest` | 0.000005 |
+| 2 | `pantsbuild.pants` | 0.000004 |
+| 3 | `Sphinx` | 0.000003 |
+| 4 | `jupyter` | 0.000003 |
+| 5 | `Django` | 0.000003 |
+| 6 | `apache-airflow` | 0.000003 |
+| 7 | `google-api-python-client` | 0.000003 |
+| 8 | `neutron` | 0.000003 |
+| 9 | `twine` | 0.000002 |
+| 10 | `nbconvert` | 0.000002 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.038088 |
 | **Comunidades Detectadas (Louvain)** | 625 |
 | **Modularidade** | 0.5505 |
 
----
-*Análise concluída em 98.08 segundos.*
-
-
-
----
-
-# Análise do Grafo: Rubygems
-
-## 1. Métricas Gerais
+## 6. Análise de Diâmetro
 | Métrica | Valor |
-|---|---|
-| **Nós (Projetos/Dependências)** | 128,010 |
-| **Arestas (Dependências)** | 578,076 |
-| **Densidade do Grafo** | 0.00003528 |
-| **Grafo Direcionado** | Sim |
+|---------|-------|
+| **Diâmetro** | 3 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 4 nós (0.0%) |
+| **Interpretação** | Rede Altamente Conectada |
+
+## 7. Resumo Executivo
+Este grafo possui **46,668 nós** e **126,759 arestas**.
+O diâmetro aproximado é **3**, indicando que 
+a rede apresenta alta conectividade, típica de ecossistemas maduros.
+
+O maior componente conectado contém 96.8% dos nós, 
+com densidade de 0.000058.
+
+---
+*Análise concluída em 112.84 segundos.*
+
+---
+
+# Análise Completa do Grafo: Rubygems
+
+## 1. Métricas Básicas
+| Métrica | Valor |
+|---------|-------|
+| **Nós** | 128,010 |
+| **Arestas** | 578,076 |
+| **Densidade** | 0.00003528 |
+| **Direcionado** | Sim |
 
 ## 2. Análise de Conectividade
 | Métrica | Valor |
-|---|---|
-| **Componentes Fracamente Conectados** | 366 |
-| **Nós no Maior Componente (LCC)** | 127,085 (99.28%) |
-| **Arestas no Maior Componente (LCC)** | 577,479 (99.90%) |
+|---------|-------|
+| **Componentes Fortemente Conectados (SCC)** | 127,564 |
+| **Componentes Fracamente Conectados (WCC)** | 366 |
+| **Maior SCC** | 241 nós |
+| **Maior WCC** | 127,085 nós |
+| **Nós no Maior Componente** | 127,085 (99.28%) |
+| **Arestas no Maior Componente** | 577,479 (99.90%) |
 
-## 3. Análise de Graus (Popularidade e Complexidade)
-### 3.1. Estatísticas Gerais de Grau
-| Métrica | In-Degree (Popularidade) | Out-Degree (Complexidade) | Grau Total |
-|---|---|---|---|
-| **Média** | 4.52 | 4.52 | 9.03 |
-| **Mediana** | 0.00 | 4.00 | 4.00 |
-| **Máximo** | 67,698 | 220 | 67,703 |
+## 3. Análise de Graus
+### 3.1. Estatísticas Gerais
+| Métrica | Valor |
+|---------|-------|
+| **Grau Médio** | 9.03 |
+| **Grau Máximo** | 67,703 |
+| **Grau Mediano** | 4.00 |
+| **In-Degree Médio** | 4.52 |
+| **In-Degree Máximo** | 67,698 |
+| **In-Degree Mediano** | 0.00 |
+| **Out-Degree Médio** | 4.52 |
+| **Out-Degree Máximo** | 220 |
+| **Out-Degree Mediano** | 4.00 |
 
 ### 3.2. Top 10 Dependências Mais Populares (Maior In-Degree)
 | Rank | Dependência | In-Degree |
-|---|---|---|
+|------|-------------|-----------|
 | 1 | `rake` | 67,698 |
 | 2 | `bundler` | 59,684 |
 | 3 | `rspec` | 48,867 |
@@ -1864,7 +2287,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 3.3. Top 10 Projetos Mais Complexos (Maior Out-Degree)
 | Rank | Projeto | Out-Degree |
-|---|---|---|
+|------|---------|------------|
 | 1 | `aws-sdk-resources` | 220 |
 | 2 | `azure_sdk` | 136 |
 | 3 | `rubysl` | 91 |
@@ -1881,7 +2304,7 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 
 ### 4.1. Top 10 Nós por Influência (PageRank)
 | Rank | Nó | PageRank Score |
-|---|---|---|
+|------|-----|----------------|
 | 1 | `rake` | 0.069164 |
 | 2 | `bundler` | 0.056957 |
 | 3 | `rspec` | 0.043198 |
@@ -1893,31 +2316,45 @@ _(Análise realizada em maior componente (Betweenness aproximado com k=500))_
 | 9 | `activesupport` | 0.013100 |
 | 10 | `coveralls` | 0.013083 |
 
-### 4.2. Top 10 Nós por Importância Estrutural (Betweenness Centrality)
+### 4.2. Top 10 Nós por Importância Estrutural (Betweenness)
 | Rank | Nó | Betweenness Score |
-|---|---|---|
-| 1 | `rubocop` | 0.001069 |
-| 2 | `parser` | 0.001001 |
-| 3 | `simplecov` | 0.000706 |
-| 4 | `docile` | 0.000691 |
-| 5 | `github-markup` | 0.000677 |
-| 6 | `github-linguist` | 0.000596 |
+|------|-----|-------------------|
+| 1 | `rubocop` | 0.001078 |
+| 2 | `parser` | 0.001005 |
+| 3 | `simplecov` | 0.000737 |
+| 4 | `docile` | 0.000722 |
+| 5 | `github-markup` | 0.000708 |
+| 6 | `github-linguist` | 0.000624 |
 | 7 | `ast` | 0.000584 |
-| 8 | `rake` | 0.000546 |
-| 9 | `rest-client` | 0.000480 |
-| 10 | `webmock` | 0.000441 |
+| 8 | `rake` | 0.000571 |
+| 9 | `rest-client` | 0.000471 |
+| 10 | `webmock` | 0.000459 |
 
 ## 5. Análise Estrutural e de Comunidades
 | Métrica | Valor |
-|---|---|
+|---------|-------|
 | **Coeficiente de Clusterização Médio** | 0.197035 |
 | **Comunidades Detectadas (Louvain)** | 420 |
 | **Modularidade** | 0.3968 |
 
+## 6. Análise de Diâmetro
+| Métrica | Valor |
+|---------|-------|
+| **Diâmetro** | 17 |
+| **Método** | Aproximado |
+| **Componente Analisado** | 241 nós (0.2%) |
+| **Interpretação** | Rede Dispersa |
+
+## 7. Resumo Executivo
+Este grafo possui **128,010 nós** e **578,076 arestas**.
+O diâmetro aproximado é **17**, indicando que 
+a rede apresenta conectividade mais dispersa.
+
+O maior componente conectado contém 99.3% dos nós, 
+com densidade de 0.000035.
+
 ---
-*Análise concluída em 2809.41 segundos.*
-
-
+*Análise concluída em 2700.12 segundos.*
 
 ---
 

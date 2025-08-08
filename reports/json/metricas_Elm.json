@@ -1,0 +1,207 @@
+{
+  "name": "Elm",
+  "nodes": 1474,
+  "edges": 3781,
+  "density": 0.0017414317046502352,
+  "is_directed": true,
+  "scc_count": 1474,
+  "wcc_count": 1,
+  "largest_scc_size": 1,
+  "largest_wcc_size": 1474,
+  "lcc_nodes": 1474,
+  "lcc_percent": 100.0,
+  "lcc_edges": 3781,
+  "lcc_edges_percent": 100.0,
+  "avg_degree": 5.130257801899593,
+  "max_degree": 1467,
+  "degree_mean": 5.130257801899593,
+  "degree_median": 3.0,
+  "degree_max": 1467,
+  "avg_in_degree": 2.5651289009497966,
+  "max_in_degree": 1467,
+  "in_degree_mean": 2.5651289009497966,
+  "in_degree_median": 0.0,
+  "in_degree_max": 1467,
+  "avg_out_degree": 2.5651289009497966,
+  "max_out_degree": 16,
+  "out_degree_mean": 2.5651289009497966,
+  "out_degree_median": 2.0,
+  "out_degree_max": 16,
+  "top_in_degree": [
+    [
+      "elm-lang/core",
+      1467
+    ],
+    [
+      "elm-lang/html",
+      628
+    ],
+    [
+      "elm-lang/http",
+      123
+    ],
+    [
+      "elm-lang/svg",
+      102
+    ],
+    [
+      "elm-community/list-extra",
+      82
+    ],
+    [
+      "NoRedInk/elm-decode-pipeline",
+      48
+    ],
+    [
+      "rtfeldman/elm-css",
+      43
+    ],
+    [
+      "elm-community/elm-test",
+      39
+    ],
+    [
+      "elm-lang/mouse",
+      37
+    ],
+    [
+      "elm-lang/navigation",
+      31
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "cmditch/mel-bew3",
+      16
+    ],
+    [
+      "Gizra/elm-essentials",
+      13
+    ],
+    [
+      "williamwhitacre/scaffold",
+      12
+    ],
+    [
+      "elm-bodybuilder/elegant",
+      12
+    ],
+    [
+      "lucamug/elm-style-framework",
+      12
+    ],
+    [
+      "williamwhitacre/gigan",
+      10
+    ],
+    [
+      "xarvh/elm-slides",
+      10
+    ],
+    [
+      "micktwomey/elmo-8",
+      10
+    ],
+    [
+      "NoRedInk/elm-doodad",
+      10
+    ],
+    [
+      "folkertdev/one-true-path-experiment",
+      9
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "elm-lang/core",
+      0.3391896226493263
+    ],
+    [
+      "elm-lang/html",
+      0.06341069942585273
+    ],
+    [
+      "elm-lang/virtual-dom",
+      0.03158930777745509
+    ],
+    [
+      "elm-lang/http",
+      0.01038093352324883
+    ],
+    [
+      "elm-lang/svg",
+      0.007006793465141092
+    ],
+    [
+      "elm-community/list-extra",
+      0.00594043890693449
+    ],
+    [
+      "elm-lang/dom",
+      0.004808432670363004
+    ],
+    [
+      "elm-lang/lazy",
+      0.003664343450851147
+    ],
+    [
+      "elm-community/elm-test",
+      0.003423468692122619
+    ],
+    [
+      "rtfeldman/elm-css",
+      0.003258246383163499
+    ]
+  ],
+  "betweenness": [
+    [
+      "elm-lang/html",
+      0.0002813598210914583
+    ],
+    [
+      "elm-community/elm-test",
+      7.880434782608696e-05
+    ],
+    [
+      "rtfeldman/elm-css",
+      4.4384057971014505e-05
+    ],
+    [
+      "elm-lang/svg",
+      3.222023757660248e-05
+    ],
+    [
+      "elm-community/elm-check",
+      2.3097826086956523e-05
+    ],
+    [
+      "elm-lang/navigation",
+      1.766304347826087e-05
+    ],
+    [
+      "Gizra/elm-essentials",
+      1.630434782608696e-05
+    ],
+    [
+      "elm-tools/parser",
+      1.4945652173913044e-05
+    ],
+    [
+      "drathier/elm-graph",
+      1.3586956521739131e-05
+    ],
+    [
+      "RGBboy/websocket-server",
+      1.2252766402369957e-05
+    ]
+  ],
+  "avg_clustering": 0.3005167509573431,
+  "communities": 12,
+  "modularity": 0.38522534441720985,
+  "diameter": 0,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 1,
+  "diameter_component_percent": 0.06784260515603799,
+  "elapsed_time": 1.7463057041168213
+}

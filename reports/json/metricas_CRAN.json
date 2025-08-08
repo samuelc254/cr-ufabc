@@ -1,0 +1,207 @@
+{
+  "name": "CRAN",
+  "nodes": 15413,
+  "edges": 102241,
+  "density": 0.0004304065876215973,
+  "is_directed": true,
+  "scc_count": 14386,
+  "wcc_count": 3,
+  "largest_scc_size": 882,
+  "largest_wcc_size": 15409,
+  "lcc_nodes": 15409,
+  "lcc_percent": 99.97404788165835,
+  "lcc_edges": 102239,
+  "lcc_edges_percent": 99.9980438375994,
+  "avg_degree": 13.266852656848116,
+  "max_degree": 9587,
+  "degree_mean": 13.266852656848116,
+  "degree_median": 6.0,
+  "degree_max": 9587,
+  "avg_in_degree": 6.633426328424058,
+  "max_in_degree": 9587,
+  "in_degree_mean": 6.633426328424058,
+  "in_degree_median": 0.0,
+  "in_degree_max": 9587,
+  "avg_out_degree": 6.633426328424058,
+  "max_out_degree": 107,
+  "out_degree_mean": 6.633426328424058,
+  "out_degree_median": 5.0,
+  "out_degree_max": 107,
+  "top_in_degree": [
+    [
+      "R",
+      9587
+    ],
+    [
+      "knitr",
+      4239
+    ],
+    [
+      "testthat",
+      4080
+    ],
+    [
+      "stats",
+      3777
+    ],
+    [
+      "rmarkdown",
+      3257
+    ],
+    [
+      "methods",
+      2728
+    ],
+    [
+      "ggplot2",
+      2442
+    ],
+    [
+      "utils",
+      2302
+    ],
+    [
+      "graphics",
+      1889
+    ],
+    [
+      "Rcpp",
+      1792
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "mlr",
+      107
+    ],
+    [
+      "broom",
+      81
+    ],
+    [
+      "fitteR",
+      76
+    ],
+    [
+      "rattle",
+      67
+    ],
+    [
+      "Seurat",
+      60
+    ],
+    [
+      "fscaret",
+      59
+    ],
+    [
+      "nlmixr",
+      52
+    ],
+    [
+      "BiodiversityR",
+      49
+    ],
+    [
+      "RxODE",
+      49
+    ],
+    [
+      "CNVScope",
+      49
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "R",
+      0.09382474133478608
+    ],
+    [
+      "testthat",
+      0.026384982520035846
+    ],
+    [
+      "methods",
+      0.025334768212568273
+    ],
+    [
+      "stats",
+      0.02503956228848662
+    ],
+    [
+      "knitr",
+      0.02148992237428728
+    ],
+    [
+      "utils",
+      0.017440411514878976
+    ],
+    [
+      "rmarkdown",
+      0.015606973918684739
+    ],
+    [
+      "graphics",
+      0.0130622837695118
+    ],
+    [
+      "MASS",
+      0.01168034113282532
+    ],
+    [
+      "Rcpp",
+      0.011632565544505407
+    ]
+  ],
+  "betweenness": [
+    [
+      "broom",
+      0.019272846701322295
+    ],
+    [
+      "dplyr",
+      0.017340812736882334
+    ],
+    [
+      "knitr",
+      0.015418108982484113
+    ],
+    [
+      "Hmisc",
+      0.01533852764447062
+    ],
+    [
+      "ggplot2",
+      0.014547094253504318
+    ],
+    [
+      "mice",
+      0.010067913258533172
+    ],
+    [
+      "caret",
+      0.008863548566489441
+    ],
+    [
+      "testthat",
+      0.007676752916547465
+    ],
+    [
+      "styler",
+      0.007480457710525804
+    ],
+    [
+      "nlme",
+      0.0071290979878692725
+    ]
+  ],
+  "avg_clustering": 0.17620836188219846,
+  "communities": 16,
+  "modularity": 0.32575542064523244,
+  "diameter": 17,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 882,
+  "diameter_component_percent": 5.72244209433595,
+  "elapsed_time": 47.77248978614807
+}

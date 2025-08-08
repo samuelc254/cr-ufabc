@@ -1,0 +1,207 @@
+{
+  "name": "Pub",
+  "nodes": 8667,
+  "edges": 28851,
+  "density": 0.00038412572194825755,
+  "is_directed": true,
+  "scc_count": 8557,
+  "wcc_count": 16,
+  "largest_scc_size": 62,
+  "largest_wcc_size": 8626,
+  "lcc_nodes": 8626,
+  "lcc_percent": 99.52694127148956,
+  "lcc_edges": 28821,
+  "lcc_edges_percent": 99.8960174690652,
+  "avg_degree": 6.6576670128072,
+  "max_degree": 4663,
+  "degree_mean": 6.6576670128072,
+  "degree_median": 3.0,
+  "degree_max": 4663,
+  "avg_in_degree": 3.3288335064036,
+  "max_in_degree": 4655,
+  "in_degree_mean": 3.3288335064036,
+  "in_degree_median": 0.0,
+  "in_degree_max": 4655,
+  "avg_out_degree": 3.3288335064036,
+  "max_out_degree": 64,
+  "out_degree_mean": 3.3288335064036,
+  "out_degree_median": 2.0,
+  "out_degree_max": 64,
+  "top_in_degree": [
+    [
+      "flutter",
+      4655
+    ],
+    [
+      "flutter_test",
+      3723
+    ],
+    [
+      "test",
+      2299
+    ],
+    [
+      "meta",
+      828
+    ],
+    [
+      "pedantic",
+      782
+    ],
+    [
+      "http",
+      684
+    ],
+    [
+      "path",
+      639
+    ],
+    [
+      "build_runner",
+      566
+    ],
+    [
+      "unittest",
+      409
+    ],
+    [
+      "logging",
+      404
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "magpiecli",
+      64
+    ],
+    [
+      "mpcli",
+      64
+    ],
+    [
+      "mgpcli",
+      64
+    ],
+    [
+      "build_runner",
+      41
+    ],
+    [
+      "devtools_app",
+      35
+    ],
+    [
+      "over_react",
+      34
+    ],
+    [
+      "pana",
+      32
+    ],
+    [
+      "dartdoc",
+      30
+    ],
+    [
+      "repub",
+      30
+    ],
+    [
+      "webdev",
+      30
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "flutter",
+      0.08888770963521009
+    ],
+    [
+      "test",
+      0.06161848778773163
+    ],
+    [
+      "flutter_test",
+      0.05874153412078998
+    ],
+    [
+      "path",
+      0.018673478407255827
+    ],
+    [
+      "pedantic",
+      0.0185011003618049
+    ],
+    [
+      "meta",
+      0.012118701391320126
+    ],
+    [
+      "intl",
+      0.011712697750905953
+    ],
+    [
+      "http",
+      0.01078761109193759
+    ],
+    [
+      "vector_math",
+      0.010329674725140191
+    ],
+    [
+      "sky_tools",
+      0.009566388569451563
+    ]
+  ],
+  "betweenness": [
+    [
+      "flutter",
+      0.006876660568485421
+    ],
+    [
+      "sky_tools",
+      0.004813887831589237
+    ],
+    [
+      "test",
+      0.00418222786049613
+    ],
+    [
+      "build_runner",
+      0.0026436412278860785
+    ],
+    [
+      "mockito",
+      0.001896170316338937
+    ],
+    [
+      "vector_math",
+      0.001405482609034316
+    ],
+    [
+      "test_core",
+      0.001320602551891303
+    ],
+    [
+      "shelf_route",
+      0.0010204213953692149
+    ],
+    [
+      "build_web_compilers",
+      0.0009113351607386566
+    ],
+    [
+      "vm_service",
+      0.0009015510424949195
+    ]
+  ],
+  "avg_clustering": 0.1103125813732834,
+  "communities": 31,
+  "modularity": 0.4839187756909653,
+  "diameter": 8,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 62,
+  "diameter_component_percent": 0.7153571016499365,
+  "elapsed_time": 15.196044445037842
+}

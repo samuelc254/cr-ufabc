@@ -1,0 +1,207 @@
+{
+  "name": "Atom",
+  "nodes": 7243,
+  "edges": 17128,
+  "density": 0.00032653493246991456,
+  "is_directed": true,
+  "scc_count": 7243,
+  "wcc_count": 222,
+  "largest_scc_size": 1,
+  "largest_wcc_size": 6770,
+  "lcc_nodes": 6770,
+  "lcc_percent": 93.46955681347508,
+  "lcc_edges": 16861,
+  "lcc_edges_percent": 98.44114899579635,
+  "avg_degree": 4.729531961894243,
+  "max_degree": 840,
+  "degree_mean": 4.729531961894243,
+  "degree_median": 2.0,
+  "degree_max": 840,
+  "avg_in_degree": 2.3647659809471215,
+  "max_in_degree": 840,
+  "in_degree_mean": 2.3647659809471215,
+  "in_degree_median": 0.0,
+  "in_degree_max": 840,
+  "avg_out_degree": 2.3647659809471215,
+  "max_out_degree": 162,
+  "out_degree_mean": 2.3647659809471215,
+  "out_degree_median": 1.0,
+  "out_degree_max": 162,
+  "top_in_degree": [
+    [
+      "atom-space-pen-views",
+      840
+    ],
+    [
+      "atom-package-deps",
+      576
+    ],
+    [
+      "eslint",
+      478
+    ],
+    [
+      "fs-plus",
+      388
+    ],
+    [
+      "underscore-plus",
+      372
+    ],
+    [
+      "atom-linter",
+      266
+    ],
+    [
+      "coffeelint",
+      247
+    ],
+    [
+      "jquery",
+      241
+    ],
+    [
+      "lodash",
+      239
+    ],
+    [
+      "request",
+      220
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "nuclide",
+      162
+    ],
+    [
+      "mstest2",
+      70
+    ],
+    [
+      "mstest1",
+      69
+    ],
+    [
+      "metasota-package-4",
+      62
+    ],
+    [
+      "build-ibmstreams",
+      53
+    ],
+    [
+      "etheratom",
+      52
+    ],
+    [
+      "veda",
+      50
+    ],
+    [
+      "touchbar-plus",
+      44
+    ],
+    [
+      "prettier-atom",
+      43
+    ],
+    [
+      "markdown-preview-plus",
+      42
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "atom-space-pen-views",
+      0.02808719059387274
+    ],
+    [
+      "atom-package-deps",
+      0.017456462666877847
+    ],
+    [
+      "coffeelint",
+      0.013774929457204087
+    ],
+    [
+      "underscore-plus",
+      0.011199440049247231
+    ],
+    [
+      "jquery",
+      0.009290485824693318
+    ],
+    [
+      "fs-plus",
+      0.008386942312824271
+    ],
+    [
+      "eslint",
+      0.007920652173786001
+    ],
+    [
+      "atom-linter",
+      0.007648036031106841
+    ],
+    [
+      "request",
+      0.006801306231991929
+    ],
+    [
+      "lodash",
+      0.006386893720150073
+    ]
+  ],
+  "betweenness": [
+    [
+      "atom-languageclient",
+      2.570921985815603e-05
+    ],
+    [
+      "autocomplete-plus",
+      3.84160756501182e-06
+    ],
+    [
+      "ionide-fsharp",
+      1.182033096926714e-06
+    ],
+    [
+      "language-c",
+      8.883014255461277e-07
+    ],
+    [
+      "jsfmt",
+      2.955082742316785e-07
+    ],
+    [
+      "achievements",
+      0.0
+    ],
+    [
+      "atom-space-pen-views",
+      0.0
+    ],
+    [
+      "advanced-new-file",
+      0.0
+    ],
+    [
+      "touch",
+      0.0
+    ],
+    [
+      "mkdirp",
+      0.0
+    ]
+  ],
+  "avg_clustering": 0.0015047801268356319,
+  "communities": 254,
+  "modularity": 0.6067458584766926,
+  "diameter": 0,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 1,
+  "diameter_component_percent": 0.013806433798149937,
+  "elapsed_time": 9.854503631591797
+}

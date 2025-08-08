@@ -1,0 +1,207 @@
+{
+  "name": "Puppet",
+  "nodes": 4716,
+  "edges": 9623,
+  "density": 0.0004327678524047106,
+  "is_directed": true,
+  "scc_count": 4712,
+  "wcc_count": 54,
+  "largest_scc_size": 2,
+  "largest_wcc_size": 4566,
+  "lcc_nodes": 4566,
+  "lcc_percent": 96.81933842239185,
+  "lcc_edges": 9520,
+  "lcc_edges_percent": 98.92964771900654,
+  "avg_degree": 4.081000848176421,
+  "max_degree": 3422,
+  "degree_mean": 4.081000848176421,
+  "degree_median": 2.0,
+  "degree_max": 3422,
+  "avg_in_degree": 2.0405004240882105,
+  "max_in_degree": 3422,
+  "in_degree_mean": 2.0405004240882105,
+  "in_degree_median": 0.0,
+  "in_degree_max": 3422,
+  "avg_out_degree": 2.0405004240882105,
+  "max_out_degree": 75,
+  "out_degree_mean": 2.0405004240882105,
+  "out_degree_median": 1.0,
+  "out_degree_max": 75,
+  "top_in_degree": [
+    [
+      "puppetlabs-stdlib",
+      3422
+    ],
+    [
+      "puppetlabs-concat",
+      554
+    ],
+    [
+      "puppetlabs-apt",
+      415
+    ],
+    [
+      "puppetlabs-inifile",
+      216
+    ],
+    [
+      "puppetlabs-apache",
+      171
+    ],
+    [
+      "puppetlabs-vcsrepo",
+      160
+    ],
+    [
+      "puppetlabs-mysql",
+      153
+    ],
+    [
+      "puppet-archive",
+      149
+    ],
+    [
+      "puppetlabs-firewall",
+      138
+    ],
+    [
+      "stahnma-epel",
+      120
+    ]
+  ],
+  "top_out_degree": [
+    [
+      "simp-simp_core",
+      75
+    ],
+    [
+      "simp-simp",
+      43
+    ],
+    [
+      "geoffwilliams-r_profile",
+      42
+    ],
+    [
+      "pltraining-classroom_legacy",
+      39
+    ],
+    [
+      "pltraining-classroom",
+      32
+    ],
+    [
+      "maestrodev-maestro_nodes",
+      20
+    ],
+    [
+      "gajdaw-symfony",
+      20
+    ],
+    [
+      "cohdjn-cisecurity",
+      20
+    ],
+    [
+      "fervid-secure_linux_cis",
+      20
+    ],
+    [
+      "puppetlabs-openstack",
+      18
+    ]
+  ],
+  "centrality_info": "maior componente (Betweenness aproximado com k=500)",
+  "pagerank": [
+    [
+      "puppetlabs-stdlib",
+      0.27544338293414394
+    ],
+    [
+      "puppetlabs-translate",
+      0.027494993578506936
+    ],
+    [
+      "puppetlabs-concat",
+      0.024679176430988575
+    ],
+    [
+      "puppetlabs-apt",
+      0.018500882135515255
+    ],
+    [
+      "puppetlabs-inifile",
+      0.00810831861405414
+    ],
+    [
+      "example42-puppi",
+      0.007751585311317582
+    ],
+    [
+      "puppet-archive",
+      0.006643287011940294
+    ],
+    [
+      "puppetlabs-vcsrepo",
+      0.0056301356975215515
+    ],
+    [
+      "puppetlabs-apache",
+      0.005319629137778369
+    ],
+    [
+      "stahnma-epel",
+      0.005225087310503278
+    ]
+  ],
+  "betweenness": [
+    [
+      "puppetlabs-concat",
+      3.580781194290421e-05
+    ],
+    [
+      "geoffwilliams-r_profile",
+      2.629272567922875e-05
+    ],
+    [
+      "puppetlabs-apt",
+      2.0829681565877887e-05
+    ],
+    [
+      "puppetlabs-apache",
+      1.405930470347648e-05
+    ],
+    [
+      "puppetlabs-inifile",
+      1.2489044697633654e-05
+    ],
+    [
+      "camptocamp-systemd",
+      1.2050832602979842e-05
+    ],
+    [
+      "simp-rsync",
+      1.0078878177037686e-05
+    ],
+    [
+      "puppetlabs-powershell",
+      9.640666082383874e-06
+    ],
+    [
+      "puppetlabs-mysql",
+      7.960853052877594e-06
+    ],
+    [
+      "tarun4-chocolatey",
+      7.011393514460999e-06
+    ]
+  ],
+  "avg_clustering": 0.14008223374661713,
+  "communities": 94,
+  "modularity": 0.5359872435131455,
+  "diameter": 1,
+  "diameter_method": "aproximado",
+  "diameter_component_size": 2,
+  "diameter_component_percent": 0.04240882103477523,
+  "elapsed_time": 5.463109731674194
+}
